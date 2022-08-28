@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "title": "Workspace One",
+        "description": "This is workspace description. Apparently for testing. This field is optional.",
+        "icon": "book",
+        "icon_color": "#fff",
+        "background_color": "#f80182",
+        "selected_table_id": 1,
+        "table_list": [
+            {
+                "id": 1,
+                "title": "Table One",
+                "view_list": [
+                    {
+                        "id": 1,
+                        "title": "View One"
+                    }
+                ],
+                "selected_view_id": 1
+            },
+            {
+                "id": 2,
+                "title": "Table Two",
+                "view_list": [
+                    {
+                        "id": 1,
+                        "title": "View One"
+                    }
+                ],
+                "selected_view_id": 1
+            },
+            {
+                "id": 3,
+                "title": "Table Three",
+                "view_list": [
+                    {
+                        "id": 1,
+                        "title": "View One"
+                    }
+                ],
+                "selected_view_id": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Workspace Two",
+        "description": "This is workspace description. Apparently for testing. This field is optional.",
+        "icon": "suitcase",
+        "icon_color": "#fff",
+        "background_color": "#9101f8",
+        "selected_table_id": 1,
+        "table_list": [
+            {
+                "id": 1,
+                "title": "Table Four",
+                "view_list": [
+                    {
+                        "id": 1,
+                        "title": "View One"
+                    }
+                ],
+                "selected_view_id": 1
+            },
+            {
+                "id": 2,
+                "title": "Table Five",
+                "view_list": [
+                    {
+                        "id": 1,
+                        "title": "View One"
+                    }
+                ],
+                "selected_view_id": 1
+            },
+            {
+                "id": 3,
+                "title": "Table Six",
+                "view_list": [
+                    {
+                        "id": 1,
+                        "title": "View One"
+                    }
+                ],
+                "selected_view_id": 1
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Workspace Three",
+        "description": "This is workspace description. Apparently for testing. This field is optional.",
+        "icon": "pen",
+        "icon_color": "#fff",
+        "background_color": "#f85301",
+        "selected_table_id": 3,
+        "table_list": [
+            {
+                "id": 1,
+                "title": "Table Seven",
+                "view_list": [
+                    {
+                        "id": 1,
+                        "title": "View One"
+                    }
+                ],
+                "selected_view_id": 1
+            },
+            {
+                "id": 2,
+                "title": "Table Eight",
+                "view_list": [
+                    {
+                        "id": 1,
+                        "title": "View One"
+                    }
+                ],
+                "selected_view_id": 1
+            },
+            {
+                "id": 3,
+                "title": "Movies",
+                "view_list": [
+                    {
+                        "id": 1,
+                        "title": "Spiderman Homecoming"
+                    },
+                    {
+                        "id": 2,
+                        "title": "The Shawshank Redemption"
+                    },
+                    {
+                        "id": 3,
+                        "title": "The Lord of the Rings"
+                    }
+                ],
+                "selected_view_id": 3
+            }
+        ]
+    }
+]
