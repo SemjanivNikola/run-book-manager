@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require("fs");
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(bodyParser.json());
@@ -9,7 +10,7 @@ app.use(cors());
 
 app.get('/', (req, res) => {
    res.send('Hello World!')
-})
+});
 
 app.get('/workspace', function (req, res) {
    // First read existing users.
@@ -18,7 +19,7 @@ app.get('/workspace', function (req, res) {
       console.log(workspace);
       res.end(JSON.stringify(workspace));
    });
-})
+});
 
 app.get('/view', function (req, res) {
    const idNotParsed = req.query.id;
@@ -30,8 +31,8 @@ app.get('/view', function (req, res) {
       const vew = JSON.parse(data);
       res.end(JSON.stringify(vew));
    });
-})
+});
 
-app.listen(3000, () => {
-   console.log(`Example app listening on port 3000`)
-})
+app.listen(PORT, () => {
+   console.log(`Our app is running on port ${PORT}`);
+});
