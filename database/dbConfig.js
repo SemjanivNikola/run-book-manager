@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 
 const config = process.env.DB_ENVIRONMENT === "staging" ? {
@@ -11,8 +10,6 @@ const config = process.env.DB_ENVIRONMENT === "staging" ? {
     password: process.env.PASS,
     port: process.env.PG_PORT,
 };
-
-// console.log("CONFIG >> ", config);
 
 module.exports = {
     config

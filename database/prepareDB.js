@@ -34,6 +34,7 @@ const view_table = `
       PRIMARY KEY ("id")
    );`;
 
+//    SAFE TO DELETE - Only for querying tables
 // const all_tables = "SELECT table_name FROM information_schema.tables";
 // pool.query(all_tables, (err, res) => {
 //     console.log("TABLES >> ", res);
