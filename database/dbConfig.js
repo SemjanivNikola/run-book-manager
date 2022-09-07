@@ -1,7 +1,7 @@
 
 require('dotenv').config();
 
-const config = process.env.DATABASE_URL ? {
+const config = process.env.DB_ENVIRONMENT === "staging" ? {
     connectionString: process.env.DATABASE_URL, ssl: {
         rejectUnauthorized: false
     }
@@ -12,7 +12,7 @@ const config = process.env.DATABASE_URL ? {
     port: process.env.PG_PORT,
 };
 
-console.log("CONFIG >> ", config);
+// console.log("CONFIG >> ", config);
 
 module.exports = {
     config
