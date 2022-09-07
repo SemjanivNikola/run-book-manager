@@ -1,5 +1,5 @@
 const { Client } = require('pg');
-const config = require('./dbConfig');
+const config = require('../database/dbConfig');
 
 const createWorkspace = (request, response) => {
     const client = new Client(config);
@@ -39,7 +39,7 @@ const deleteWorkspace = (request, response) => {
 const readWorkspaceList = (request, response) => {
     const client = new Client(config);
     client.connect();
-    
+     
     client.query('SELECT * FROM workspace ORDER BY id ASC', (error, results) => {
         client.end();
         if (error) {

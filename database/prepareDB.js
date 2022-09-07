@@ -2,7 +2,7 @@ const pgtools = require("pgtools");
 const { Pool } = require('pg');
 const config = require('./dbConfig');
 
-const PG_NAME = "ttab1asdas22";
+const PG_NAME = "table_manager";
 
 pgtools.createdb(config, PG_NAME, function (err, _res) {
     if (err) {
@@ -20,6 +20,13 @@ const workspace_table = `
       PRIMARY KEY ("id")
    );`;
 
+const table_table = `
+   CREATE TABLE IF NOT EXISTS "table" (
+      "id" SERIAL,
+      "data" json NOT NULL,
+      PRIMARY KEY ("id")
+   );`;
+
 const view_table = `
    CREATE TABLE IF NOT EXISTS "view" (
       "id" SERIAL,
@@ -32,7 +39,7 @@ const execute = async (query) => {
         await pool.query(query);
         return true;
     } catch (error) {
-        console.error("here ???? ", error.stack);
+        console.error(error.stack);
         return false;
     }
 };
@@ -40,6 +47,12 @@ const execute = async (query) => {
 execute(workspace_table).then(result => {
     if (result) {
         console.log('Workspace table created');
+    }
+});
+
+execute(table_table).then(result => {
+    if (result) {
+        console.log('Table table created');
     }
 });
 
