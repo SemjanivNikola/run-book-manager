@@ -34,6 +34,12 @@ const view_table = `
       PRIMARY KEY ("id")
    );`;
 
+const all_tables = "SELECT table_name FROM information_schema.tables";
+pool.query(all_tables, (err, res) => {
+    console.log("TABLES >> ", res);
+    console.log("ERROR >> ", err);
+});
+
 const execute = async (query) => {
     try {
         await pool.query(query);
@@ -43,6 +49,8 @@ const execute = async (query) => {
         return false;
     }
 };
+
+
 
 execute(workspace_table).then(result => {
     if (result) {

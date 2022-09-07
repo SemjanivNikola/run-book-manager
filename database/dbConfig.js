@@ -1,20 +1,18 @@
 
-const USER = "nikolasemjaniv";
-const PASS = "sema1204.";
-const HOST = "localhost";
-const PG_PORT = 5432;
+require('dotenv').config();
 
-// const USER = process.env.USER;
-// const PASS = process.env.PASS;
-// const HOST = process.env.HOST;
-// const PG_PORT = process.env.PG_PORT;
-
-const config = {
-    user: USER,
-    host: HOST,
-    password: PASS,
-    port: PG_PORT
+const config = process.env.DATABASE_URL ? {
+    connectionString: process.env.DATABASE_URL, ssl: {
+        rejectUnauthorized: false
+    }
+} : {
+    user: process.env.USER,
+    host: process.env.HOST,
+    password: process.env.PASS,
+    port: process.env.PG_PORT,
 };
+
+console.log("CONFIG >> ", config);
 
 module.exports = {
     config
