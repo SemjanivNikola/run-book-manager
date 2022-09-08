@@ -1801,10 +1801,18 @@
                 "direction": 2
             }
         ],
-        "filter": [],
+        "filter": [
+            {
+                "logic": "where",
+                "id": 2,
+                "condition": "is",
+                "value": "done"
+            }
+        ],
         "summary": [
             "hide_fields",
-            "sort"
+            "sort",
+            "filter"
         ]
     }
 }
