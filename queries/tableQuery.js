@@ -28,20 +28,6 @@ const readWorkspaceTableList = (id) => {
     return queryAll(sql, data);
 };
 
-const readViewByID = (request, response) => {
-    const client = new Client(config);
-    client.connect();
-
-    const id = parseInt(request.params.id);
-
-    client.query('SELECT * FROM view WHERE id = $1', [id], (error, results) => {
-        if (error) {
-            throw error
-        }
-
-    });
-};
-
 module.exports = {
     createTable,
     readWorkspaceTableList

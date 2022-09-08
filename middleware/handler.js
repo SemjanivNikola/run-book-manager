@@ -82,10 +82,24 @@ const readWorkspaceByID = async (request, response) => {
     }
 };
 
+const readViewByID = async (request, response) => {
+    const id = parseInt(request.params.id);
+    
+    try {
+        const view = await viewQuery.readViewByID(id);
+        const res = {id: view.id, ...view.data};
+
+        response.status(200).json(res);
+    } catch (err) {
+        response.status(400).json(err);
+    }
+};
+
 module.exports = {
     createWorkspace,
     createTable,
     createView,
     readWorkspaceList,
-    readWorkspaceByID
+    readWorkspaceByID,
+    readViewByID
 }

@@ -61,18 +61,11 @@ const deleteView = (request, response) => {
     });
 };
 
-const readViewByID = (request, response) => {
-    const client = new Client(config);
-    client.connect();
+const readViewByID = (id) => {
+    const sql = 'SELECT * FROM view WHERE id = $1';
+    const data = [id];
 
-    const id = parseInt(request.params.id);
-
-    client.query('SELECT * FROM view WHERE id = $1', [id], (error, results) => {
-        if (error) {
-            throw error
-        }
-
-    });
+    return queryOne(sql, data);
 };
 
 module.exports = {

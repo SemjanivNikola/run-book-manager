@@ -33,7 +33,7 @@ app.delete('/worspace/:id', wsQuery.deleteWorkspace); //TODO:
 app.post('/table', handler.createTable);
 
 app.post('/view', handler.createView);
-app.get('/view/:id', viewQuery.readViewByID); //TODO:
+app.get('/view/:id', handler.readViewByID);
 app.delete('/view/:id', viewQuery.deleteView); //TODO:
 
 app.get('/viewtest', function (req, res) {
