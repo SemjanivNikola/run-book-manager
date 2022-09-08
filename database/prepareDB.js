@@ -2,7 +2,9 @@ const pgtools = require("pgtools");
 const { Pool } = require('pg');
 const config = require('./dbConfig');
 
-const PG_NAME = "table_manager";
+// This is main db name. Created on server creation, but just to make sure we are going to create it on server start,
+// if it's not already
+const PG_NAME = "postgres";
 
 pgtools.createdb(config, PG_NAME, function (err, _res) {
     if (err) {
@@ -23,6 +25,7 @@ const workspace_table = `
 const table_table = `
    CREATE TABLE IF NOT EXISTS "table_group" (
       "id" SERIAL,
+      "workspace_id" INTEGER NOT NULL,
       "data" json NOT NULL,
       PRIMARY KEY ("id")
    );`;
@@ -30,6 +33,7 @@ const table_table = `
 const view_table = `
    CREATE TABLE IF NOT EXISTS "view" (
       "id" SERIAL,
+      "table_id" INTEGER NOT NULL,
       "data" json NOT NULL,
       PRIMARY KEY ("id")
    );`;

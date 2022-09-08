@@ -2,6 +2,10 @@ const wsQuery = require('../queries/workspaceQuery');
 const viewQuery = require('../queries/viewQuery');
 const tableQuery = require('../queries/tableQuery');
 
+/**************************************/
+/**         WRITE OPERATIONS         */
+/************************************/
+
 const createWorkspace = async (request, response) => {
     const {tableTitle, viewTitle, ...otherProps} = request.body;
 
@@ -41,8 +45,47 @@ const createView = async (request, response) => {
     }
 };
 
+/*************************************/
+/**         READ OPERATIONS         */
+/***********************************/
+
+const readWorkspaceList = async (_request, response) => {
+    try {
+        const list = await wsQuery.readWorkspaceList();
+        const res = [];
+
+        list.forEach((item) => {
+            res.push({id: item.id, ...item.data});
+        });
+
+        response.status(200).json(res);
+    } catch (err) {
+        response.status(400).json(err);
+    }
+};
+
+const readWorkspaceByID = async (request, response) => {
+    const id = parseInt(request.params.id);
+    
+    try {
+        const ws = await wsQuery.readWorkspaceByID(id);
+        const res = {id: ws.id, table_list: [], ...ws.data};
+        
+        const tableList = await tableQuery.readWorkspaceTableList(res.id);
+        tableList.forEach((item) => {
+            res.table_list.push({id: item.id, ...item.data});
+        });
+
+        response.status(200).json(res);
+    } catch (err) {
+        response.status(400).json(err);
+    }
+};
+
 module.exports = {
     createWorkspace,
     createTable,
-    createView
+    createView,
+    readWorkspaceList,
+    readWorkspaceByID
 }

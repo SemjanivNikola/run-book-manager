@@ -1,9 +1,8 @@
-const { query } = require('./query');
+const { queryOne, queryAll } = require('./query');
 
 const createView = (title, tableId) => {
-    const data = [{
+    const data = [tableId, {
         title,
-        table: tableId,
         header: [
             {
                 id: 1,
@@ -39,9 +38,9 @@ const createView = (title, tableId) => {
             summary: []
         }
     }]
-    const sql = 'INSERT INTO view (data) VALUES ($1) RETURNING *';
+    const sql = 'INSERT INTO view (table_id, data) VALUES ($1, $2) RETURNING *';
 
-    return query(sql, data);
+    return queryOne(sql, data);
 };
 
 
@@ -62,7 +61,6 @@ const deleteView = (request, response) => {
     });
 };
 
-// NOTE: $1 is placeholder for value that postgresql use natively instead of '?'
 const readViewByID = (request, response) => {
     const client = new Client(config);
     client.connect();

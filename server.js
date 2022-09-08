@@ -26,8 +26,8 @@ app.get('/', (_req, res) => {
 });
 
 app.post('/workspace', handler.createWorkspace);
-app.get('/workspace', wsQuery.readWorkspaceList); //TODO:
-app.get('/workspace/:id', wsQuery.readWorspaceByID); //TODO:
+app.get('/workspace', handler.readWorkspaceList);
+app.get('/workspace/:id', handler.readWorkspaceByID);
 app.delete('/worspace/:id', wsQuery.deleteWorkspace); //TODO:
 
 app.post('/table', handler.createTable);
