@@ -1,22 +1,10 @@
-const { Client } = require('pg');
-const config = require('../database/dbConfig');
+const { query } = require('./query');
 
-const createView = (request, response) => {
-    const client = new Client(config);
-    client.connect();
+const createTable = (title, viewTitle, workspace) => {
+    const data = [{ workspace, title, view_list: [{ id: 1, title: viewTitle }], selected_view_id: null }];
+    const sql = 'INSERT INTO table_group (data) VALUES ($1) RETURNING *';
 
-    const data = request.body;
-
-    console.log("Data >> ", data);
-
-    client.query('INSERT INTO view (data) VALUES ($1) RETURNING *', [data], (error, results) => {
-        client.end();
-        if (error) {
-            throw error
-        }
-
-        response.status(201).send(results);
-    })
+    return query(sql, data);
 };
 
 // TODO:
@@ -52,7 +40,7 @@ const readViewByID = (request, response) => {
 };
 
 module.exports = {
-    createView,
+    createTable,
     deleteView,
     readViewByID,
 }

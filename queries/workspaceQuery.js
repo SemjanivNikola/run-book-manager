@@ -1,22 +1,10 @@
-const { Client } = require('pg');
-const config = require('../database/dbConfig');
+const { query } = require('./query');
 
-const createWorkspace = (request, response) => {
-    const client = new Client(config);
-    client.connect();
+const createWorkspace = (body) => {
+    const data = [{ selected_table_id: null, ...body }];
+    const sql = 'INSERT INTO workspace (data) VALUES ($1) RETURNING *';
 
-    const data = request.body;
-
-    console.log("Data >> ", data);
-
-  client.query('INSERT INTO workspace (data) VALUES ($1) RETURNING *', [data], (error, results) => {
-    client.end();
-    if (error) {
-      throw error
-    }
-
-    response.status(201).send(`User added with ID: ${results.rows[0].id}`)
-  })
+    return query(sql, data);
 };
 
 // TODO:
@@ -39,7 +27,7 @@ const deleteWorkspace = (request, response) => {
 const readWorkspaceList = (request, response) => {
     const client = new Client(config);
     client.connect();
-     
+
     client.query('SELECT * FROM workspace ORDER BY id ASC', (error, results) => {
         client.end();
         if (error) {
@@ -84,7 +72,7 @@ module.exports = {
     deleteWorkspace,
     readWorkspaceList,
     readWorspaceByID,
-  }
+}
 
 
 
