@@ -5,7 +5,7 @@ const cors = require('cors');
 
 require('./database/prepareDB');
 
-const workspaceHandler = require('./middleware/workspaceHandler');
+const handler = require('./middleware/handler');
 
 const wsQuery = require('./queries/workspaceQuery');
 const viewQuery = require('./queries/viewQuery');
@@ -25,14 +25,16 @@ app.get('/', (_req, res) => {
    res.send('Node.js, Express, and Postgres API')
 });
 
-app.post('/workspace', workspaceHandler.create);
-app.get('/workspace', wsQuery.readWorkspaceList);
-app.get('/workspace/:id', wsQuery.readWorspaceByID);
-app.delete('/worspace/:id', wsQuery.deleteWorkspace);
+app.post('/workspace', handler.createWorkspace);
+app.get('/workspace', wsQuery.readWorkspaceList); //TODO:
+app.get('/workspace/:id', wsQuery.readWorspaceByID); //TODO:
+app.delete('/worspace/:id', wsQuery.deleteWorkspace); //TODO:
 
-app.post('/view', viewQuery.createView);
-app.get('/view/:id', viewQuery.readViewByID);
-app.delete('/view/:id', viewQuery.deleteView);
+app.post('/table', handler.createTable);
+
+app.post('/view', handler.createView);
+app.get('/view/:id', viewQuery.readViewByID); //TODO:
+app.delete('/view/:id', viewQuery.deleteView); //TODO:
 
 app.get('/viewtest', function (req, res) {
    const idNotParsed = req.query.id;
