@@ -21,7 +21,7 @@ const workspace_table = `
    );`;
 
 const table_table = `
-   CREATE TABLE IF NOT EXISTS "table" (
+   CREATE TABLE IF NOT EXISTS "table_group" (
       "id" SERIAL,
       "data" json NOT NULL,
       PRIMARY KEY ("id")
@@ -61,7 +61,7 @@ execute(workspace_table).then(result => {
 
 execute(table_table).then(result => {
     if (result) {
-        console.log('Table table created');
+        console.log('Table_group table created');
     }
 });
 
