@@ -1,5 +1,5 @@
 const { Client } = require('pg');
-const config = require('../database/dbConfig');
+const { config } = require('../database/dbConfig');
 
 const queryOne = async (sql, values = undefined) => {
     const client = new Client(config);

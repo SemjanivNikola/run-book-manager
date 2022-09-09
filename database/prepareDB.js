@@ -1,16 +1,18 @@
 const pgtools = require("pgtools");
 const { Pool } = require('pg');
-const config = require('./dbConfig');
+const { config } = require('./dbConfig');
 
 // This is main db name. Created on server creation, but just to make sure we are going to create it on server start,
 // if it's not already
-const PG_NAME = "postgres";
-
-pgtools.createdb(config, PG_NAME, function (err, _res) {
-    if (err) {
-        console.log(`Database with name ${PG_NAME} already exists.`);
-    }
-});
+if (process.env.DB_ENVIRONMENT === "development") {
+    const PG_NAME = "postgre";
+    
+    pgtools.createdb(config, PG_NAME, function (err, _res) {
+        if (err) {
+            console.log(`Database with name ${PG_NAME} already exists.`);
+        }
+    });
+} 
 
 // Making a connection after creating database to be sure we can connect to something
 const pool = new Pool(config);
