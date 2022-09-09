@@ -11,8 +11,10 @@ const createWorkspace = async (request, response) => {
 
     try {
         const workspace = await wsQuery.createWorkspace(otherProps);
-        const table = await tableQuery.createTable(tableTitle, viewTitle, workspace.id);
-        await viewQuery.createView(viewTitle, table.id);
+        const table = await tableQuery.createTable(tableTitle, workspace.id);
+        const view = await viewQuery.createView(viewTitle, table.id);
+
+        await tableQuery.updateViewList(table.id, [view.id, viewTitle]);
 
         response.status(200).json({id: workspace.id, ...workspace.data})
     } catch (err) {
@@ -24,10 +26,12 @@ const createTable = async (request, response) => {
     const {workspaceId, title, viewTitle, } = request.body;
 
     try {
-        const table = await tableQuery.createTable(title, viewTitle, workspaceId);
-        await viewQuery.createView(viewTitle, table.id);
+        const table = await tableQuery.createTable(title, workspaceId);
+        const view = await viewQuery.createView(viewTitle, table.id);
 
-        response.status(200).json({id: table.id, ...table.data})
+        const updatedTable = await tableQuery.updateViewList(table.id, [view.id, viewTitle]);
+
+        response.status(200).json({id: updatedTable.id, ...updatedTable.data})
     } catch (err) {
         response.status(400).json(err);
     }
@@ -38,8 +42,9 @@ const createView = async (request, response) => {
 
     try {
         const view = await viewQuery.createView(title, tableId);
+        await tableQuery.updateViewList(tableId, [view.id, title]);
 
-        response.status(200).json({id: view.id})
+        response.status(200).json({id: view.id, title: view.data.title, tableId})
     } catch (err) {
         response.status(400).json(err);
     }
@@ -94,6 +99,12 @@ const readViewByID = async (request, response) => {
         response.status(400).json(err);
     }
 };
+
+/*************************************/
+/**       UPDATE OPERATIONS         */
+/***********************************/
+
+
 
 module.exports = {
     createWorkspace,

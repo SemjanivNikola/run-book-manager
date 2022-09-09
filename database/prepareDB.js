@@ -5,7 +5,7 @@ const { config } = require('./dbConfig');
 // This is main db name. Created on server creation, but just to make sure we are going to create it on server start,
 // if it's not already
 if (process.env.DB_ENVIRONMENT === "development") {
-    const PG_NAME = "postgre";
+    const PG_NAME = "postgres";
     
     pgtools.createdb(config, PG_NAME, function (err, _res) {
         if (err) {

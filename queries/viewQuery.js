@@ -27,9 +27,9 @@ const createView = (title, tableId) => {
             },
         ],
         body: [
-            [{ value: 1, isShown: true }, { value: "", type: 1 }, { value: "", type: 1 }, { value: "", type: 4 }],
-            [{ value: 1, isShown: true }, { value: "", type: 1 }, { value: "", type: 1 }, { value: "", type: 4 }],
-            [{ value: 1, isShown: true }, { value: "", type: 1 }, { value: "", type: 1 }, { value: "", type: 4 }]
+            [{ value: 1, isShown: true }, { value: "", type: 1, isShown: true }, { value: "", type: 1, isShown: true }, { value: "", type: 4, isShown: true }],
+            [{ value: 2, isShown: true }, { value: "", type: 1, isShown: true }, { value: "", type: 1, isShown: true }, { value: "", type: 4, isShown: true }],
+            [{ value: 3, isShown: true }, { value: "", type: 1, isShown: true }, { value: "", type: 1, isShown: true }, { value: "", type: 4, isShown: true }]
         ],
         options: {
             hidden: 0,

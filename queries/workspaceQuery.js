@@ -2,7 +2,7 @@ const { queryOne, queryAll } = require('./query');
 
 // NOTE: $1 is placeholder for value that postgresql use natively instead of '?'
 const createWorkspace = (body) => {
-    const data = [{ selected_table_id: 1, ...body }];
+    const data = [body];
     const sql = 'INSERT INTO workspace (data) VALUES ($1) RETURNING *';
 
     return queryOne(sql, data);
@@ -35,11 +35,19 @@ const readWorkspaceByID = (id) => {
     return queryOne(sql, data);
 };
 
+const updateRow = (id, value) => {
+    const data = [value, id];
+    const sql = 'UPDATE workspace SET selected_table_id = $1 WHERE id = $2';
+
+    return queryOne(sql, data);
+};
+
 module.exports = {
     createWorkspace,
     deleteWorkspace,
     readWorkspaceList,
     readWorkspaceByID,
+    updateRow
 }
 
 
