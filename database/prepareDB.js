@@ -17,10 +17,10 @@ if (process.env.DB_ENVIRONMENT === "development") {
 // Making a connection after creating database to be sure we can connect to something
 const pool = new Pool(config);
 
-// If DB reset is needed
-const dropws = `DROP TABLE "workspace";`;
-const droptable = `DROP TABLE "table_group";`;
-const dropview = `DROP TABLE "view";`;
+// NOTE: If DB reset is needed
+// const dropws = `DROP TABLE "workspace";`;
+// const droptable = `DROP TABLE "table_group";`;
+// const dropview = `DROP TABLE "view";`;
 
 const workspace_table = `
    CREATE TABLE IF NOT EXISTS "workspace" (
@@ -62,39 +62,40 @@ const execute = async (query) => {
     }
 };
 
-execute(dropws).then(result => {
-    if (result) {
-        console.log('Workspace table droped');
-    }
-});
-execute(droptable).then(result => {
-    if (result) {
-        console.log('Table group table droped');
-    }
-});
-execute(dropview).then(result => {
-    if (result) {
-        console.log('View table droped');
-    }
-});
-
-
-// execute(workspace_table).then(result => {
+// NOTE: This executes table drop sql statements
+// execute(dropws).then(result => {
 //     if (result) {
-//         console.log('Workspace table created');
+//         console.log('Workspace table droped');
+//     }
+// });
+// execute(droptable).then(result => {
+//     if (result) {
+//         console.log('Table group table droped');
+//     }
+// });
+// execute(dropview).then(result => {
+//     if (result) {
+//         console.log('View table droped');
 //     }
 // });
 
-// execute(table_table).then(result => {
-//     if (result) {
-//         console.log('Table_group table created');
-//     }
-// });
 
-// execute(view_table).then(result => {
-//     if (result) {
-//         console.log('View table created');
-//     }
-// });
+execute(workspace_table).then(result => {
+    if (result) {
+        console.log('Workspace table created');
+    }
+});
+
+execute(table_table).then(result => {
+    if (result) {
+        console.log('Table_group table created');
+    }
+});
+
+execute(view_table).then(result => {
+    if (result) {
+        console.log('View table created');
+    }
+});
 
 pool.end();
