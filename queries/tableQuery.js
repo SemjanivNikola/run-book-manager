@@ -1,3 +1,4 @@
+const { table } = require('console');
 const { queryOne, queryAll } = require('./query');
 
 const createTable = (title, workspace) => {
@@ -49,11 +50,32 @@ const updateViewList = async (id, value) => {
     return queryOne(sql, data);
 };
 
+const deletetableByID = (id) => {
+    const sql = 'DELETE FROM table_group WHERE id = $1';
+    const data = [id];
+
+    return queryOne(sql, data);
+};
+
+const updatetableByID = (id, title) => {
+    var x = title;
+    console.log(x);
+    const sql = `UPDATE table_group SET data = jsonb_set(data, '{title}', '$2') WHERE id='$1'`;
+    const data = [id, title];
+
+   
+
+
+    return queryOne(sql, data);
+};
+
 module.exports = {
     createTable,
     readWorkspaceTableList,
     updateRow,
-    updateViewList
+    updateViewList,
+    deletetableByID,
+    updatetableByID
 }
 
 

@@ -28,13 +28,17 @@ app.get('/', (_req, res) => {
 app.post('/workspace', handler.createWorkspace);
 app.get('/workspace', handler.readWorkspaceList);
 app.get('/workspace/:id', handler.readWorkspaceByID);
-app.delete('/worspace/:id', wsQuery.deleteWorkspace); //TODO:
+app.delete('/workspace/:id', handler.deleteWorkspaceByID);
+
 
 app.post('/table', handler.createTable);
+app.delete('/table/:id', handler.deletetableByID);
+app.post('/table/:id', handler.updatetableByID);
 
 app.post('/view', handler.createView);
 app.get('/view/:id', handler.readViewByID);
-app.delete('/view/:id', viewQuery.deleteView); //TODO:
+app.delete('/view/:id', handler.deleteViewByID); 
+
 
 app.get('/viewtest', function (req, res) {
    const idNotParsed = req.query.id;

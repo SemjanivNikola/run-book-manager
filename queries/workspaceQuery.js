@@ -9,7 +9,7 @@ const createWorkspace = (body) => {
 };
 
 // TODO:
-const deleteWorkspace = (request, response) => {
+const deleteWorkspace2 = (request, response) => {
     const id = parseInt(request.params.id);
 
     client.query('DELETE FROM workspace WHERE id=$1', [id], (error, results) => {
@@ -22,10 +22,29 @@ const deleteWorkspace = (request, response) => {
     });
 };
 
+
+const deleteWorkspace = (id) => {
+    const x = [id];
+    const data = x[0].params.id;
+    const sql = `DELETE FROM workspace WHERE id = ${data}`;
+    
+    console.log(sql);
+    console.log(data);
+    
+    return queryOne(sql, data);
+};
+
 const readWorkspaceList = () => {
     const sql = 'SELECT * FROM workspace ORDER BY id ASC';
-    
+     
     return queryAll(sql);
+};
+
+const deleteWorkspaceByID = (id) => {
+    const sql = 'DELETE FROM workspace WHERE id = $1';
+    const data = [id];
+
+    return queryOne(sql, data);
 };
 
 const readWorkspaceByID = (id) => {
@@ -47,7 +66,8 @@ module.exports = {
     deleteWorkspace,
     readWorkspaceList,
     readWorkspaceByID,
-    updateRow
+    updateRow,
+    deleteWorkspaceByID
 }
 
 

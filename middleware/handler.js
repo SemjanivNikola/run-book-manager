@@ -87,6 +87,7 @@ const readWorkspaceByID = async (request, response) => {
     }
 };
 
+
 const readViewByID = async (request, response) => {
     const id = parseInt(request.params.id);
     
@@ -105,6 +106,80 @@ const readViewByID = async (request, response) => {
 /***********************************/
 
 
+const updatetableByID = async (request, response) => {
+    const id = parseInt(request.params.id);
+    
+    try {
+        const ws = await tableQuery.updatetableByID(id);
+        const res = {id: ws.id, table_list: [], ...ws.data};
+        
+        const tableList = await tableQuery.updatetableByID(res.id);
+        tableList.forEach((item) => {
+            res.table_list.push({id: item.id, ...item.data});
+        });
+        response.status(200).json(res);
+    } catch (err) {
+        response.status(400).json(err);
+    }
+};
+
+
+/*************************************/
+/**       DELETE OPERATIONS         */
+/***********************************/
+
+const deleteWorkspaceByID = async (request, response) => {
+    const id = parseInt(request.params.id);
+    
+    try {
+        const ws = await wsQuery.deleteWorkspaceByID(id);
+        const res = {id: ws.id, table_list: [], ...ws.data};
+        
+        const tableList = await tableQuery.deleteWorkspaceTableList(res.id);
+        tableList.forEach((item) => {
+            res.table_list.push({id: item.id, ...item.data});
+        });
+        response.status(200).json(res);
+    } catch (err) {
+        response.status(400).json(err);
+    }
+};
+
+const deleteViewByID = async (request, response) => {
+    const id = parseInt(request.params.id);
+    
+    try {
+        const ws = await viewQuery.deleteViewByID(id);
+        const res = {id: ws.id, table_list: [], ...ws.data};
+        
+        const tableList = await tableQuery.deleteViewByID(res.id);
+        tableList.forEach((item) => {
+            res.table_list.push({id: item.id, ...item.data});
+        });
+        response.status(200).json(res);
+    } catch (err) {
+        response.status(400).json(err);
+    }
+};
+
+const deletetableByID = async (request, response) => {
+    const id = parseInt(request.params.id);
+    
+    try {
+        const ws = await tableQuery.deletetableByID(id);
+        const res = {id: ws.id, table_list: [], ...ws.data};
+        
+        const tableList = await tableQuery.deletetableByID(res.id);
+        tableList.forEach((item) => {
+            res.table_list.push({id: item.id, ...item.data});
+        });
+        response.status(200).json(res);
+    } catch (err) {
+        response.status(400).json(err);
+    }
+};
+
+
 
 module.exports = {
     createWorkspace,
@@ -112,5 +187,9 @@ module.exports = {
     createView,
     readWorkspaceList,
     readWorkspaceByID,
-    readViewByID
+    readViewByID,
+    deleteWorkspaceByID,
+    deleteViewByID,
+    deletetableByID,
+    updatetableByID
 }

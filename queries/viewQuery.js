@@ -44,6 +44,13 @@ const createView = (title, tableId) => {
 };
 
 
+const deleteViewByID = (id) => {
+    const sql = 'DELETE FROM view WHERE id = $1';
+    const data = [id];
+
+    return queryOne(sql, data);
+};
+
 // TODO:
 const deleteView = (request, response) => {
     const client = new Client(config);
@@ -72,6 +79,7 @@ module.exports = {
     createView,
     deleteView,
     readViewByID,
+    deleteViewByID
 }
 
 
