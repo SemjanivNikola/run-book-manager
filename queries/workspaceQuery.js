@@ -8,18 +8,11 @@ const createWorkspace = (body) => {
     return queryOne(sql, data);
 };
 
-// TODO:
-const deleteWorkspace = (request, response) => {
-    const id = parseInt(request.params.id);
+const deleteWorkspace = (body) => {
+    const data = [body];
+    const sql = 'DELETE FROM workspace WHERE id = $1';
 
-    client.query('DELETE FROM workspace WHERE id=$1', [id], (error, results) => {
-        client.end();
-        if (error) {
-            throw error
-        }
-        console.log("RESULTS OF QUERY >> ", results);
-        response.status(200).json(results.rows);
-    });
+    return queryOne(sql, data);
 };
 
 const readWorkspaceList = () => {

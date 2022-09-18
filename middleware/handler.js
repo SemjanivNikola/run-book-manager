@@ -104,7 +104,21 @@ const readViewByID = async (request, response) => {
 /**       UPDATE OPERATIONS         */
 /***********************************/
 
+/*************************************/
+/**       DELETE OPERATIONS         */
+/***********************************/
 
+const deleteWorkspace = async (request, response) => {
+    const id = parseInt(request.params.id);
+    
+    try {
+        const res = await wsQuery.deleteWorkspace(id);
+
+        response.status(200).json(res);
+    } catch (err) {
+        response.status(400).json(err);
+    }
+};
 
 module.exports = {
     createWorkspace,
@@ -112,5 +126,6 @@ module.exports = {
     createView,
     readWorkspaceList,
     readWorkspaceByID,
-    readViewByID
+    readViewByID,
+    deleteWorkspace
 }
