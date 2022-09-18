@@ -3,11 +3,10 @@ const fs = require("fs");
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-require('./database/prepareDB');
+// require('./database/prepareDB');
 
 const handler = require('./middleware/handler');
-
-const wsQuery = require('./queries/workspaceQuery');
+const runbookHandler = require('./middleware/runbookHandler');
 const viewQuery = require('./queries/viewQuery');
 
 const PORT = process.env.PORT || 3000;
@@ -36,17 +35,8 @@ app.post('/view', handler.createView);
 app.get('/view/:id', handler.readViewByID);
 app.delete('/view/:id', viewQuery.deleteView); //TODO:
 
-app.get('/viewtest', function (req, res) {
-   const idNotParsed = req.query.id;
-   const id = parseInt(req.query.id);
-   //  console.log("PARAM ID >> ", id);
-   //  console.log("PARAM ID >> ", idNotParsed, " - TYPE: ", typeof idNotParsed);
-   // First read existing users.
-   fs.readFile(__dirname + "/" + "view.json", 'utf8', function (err, data) {
-      const vew = JSON.parse(data);
-      res.end(JSON.stringify(vew));
-   });
-});
+app.get('/process', runbookHandler.readList);
+app.get('/process/:id', runbookHandler.readProcessByID);
 
 app.listen(PORT, () => {
    console.log(`App is running on port ${PORT}`);
