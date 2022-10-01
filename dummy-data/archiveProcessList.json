@@ -1,3 +1,37 @@
-{
-    "id": 1
-}
+[
+    {
+        "id": 2,
+        "title": "Proces prijave prakse",
+        "manager": "Nikola Tanković",
+        "averageDuration": "90 dana",
+        "totalSteps": 9
+    },
+    {
+        "id": 15,
+        "title": "Speak English at work",
+        "manager": "Nikola Tanković",
+        "averageDuration": "47 dana",
+        "totalSteps": 7
+    },
+    {
+        "id": 16,
+        "title": "Speak English at work",
+        "manager": "Nikola Tanković",
+        "averageDuration": "47 dana",
+        "totalSteps": 7
+    },
+    {
+        "id": 17,
+        "title": "Speak English at work",
+        "manager": "Nikola Tanković",
+        "averageDuration": "47 dana",
+        "totalSteps": 7
+    },
+    {
+        "id": 18,
+        "title": "Speak English at work",
+        "manager": "Nikola Tanković",
+        "averageDuration": "47 dana",
+        "totalSteps": 7
+    }
+]

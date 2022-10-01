@@ -1,35 +1,34 @@
 {
     "id": 2,
-    "title": "Proces prijave prakse",
-    "status": "in progress",
-    "totalProgres": 43,
-    "time": {
-        "average": "3m",
-        "total": "32h"
-    },
-    "stepsDone": {
-        "total": 7,
-        "done": 3
+    "info": {
+        "title": "Proces prijave prakse",
+        "status": "in progress",
+        "progress": 43,
+        "timeAverage": "3m",
+        "timeTotal": "32h",
+        "stepTotal": 7,
+        "stepDone": 3
     },
     "currentStep": [
         0,
         0
     ],
     "stepList": [
-        {
-            "id": 1,
-            "title": "Odabir preferencija za paksu",
-            "subTitle": "Preferencije",
-            "caption": "Odabrane preferencije",
-            "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
-            "summary": "Odaberi do 3 preferencije gdje bi želio/la odrađivati praksu.",
-            "actionSummary": null,
-            "status": "in progress",
-            "urlIndexList": [
-                0,
-                1
-            ]
-        }
+        [
+            {
+                "id": 1,
+                "title": "Odabir preferencija za paksu",
+                "caption": "Odabrane preferencije",
+                "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
+                "summary": "Odaberi do 3 preferencije gdje bi želio/la odrađivati praksu.",
+                "actionSummary": null,
+                "status": "in progress",
+                "urlIndexList": [
+                    0,
+                    1
+                ]
+            }
+        ]
     ],
     "urlList": [
         {
@@ -38,6 +37,14 @@
         },
         {
             "title": "Prijavi se na 3 najdraža zadatka",
+            "url": "http://www.google.com"
+        },
+        {
+            "title": "Možeš predati projekt ovdje",
+            "url": "http://www.google.com"
+        },
+        {
+            "title": "Prijavi rok za obranu",
             "url": "http://www.google.com"
         }
     ]
