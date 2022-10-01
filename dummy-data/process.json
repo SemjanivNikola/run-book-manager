@@ -2,6 +2,7 @@
     "id": 2,
     "info": {
         "title": "Proces prijave prakse",
+        "description": "Ovdje se nalaze svi detalji vezani uz proces prijave i rješavanja prakse. Sve potrebne poveznice i kratke, ali bitne informacije o pojedinom koraku.",
         "status": "in progress",
         "progress": 43,
         "timeAverage": "3m",
