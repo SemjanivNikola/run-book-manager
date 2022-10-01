@@ -4,34 +4,44 @@
         "title": "Proces prijave prakse",
         "manager": "Nikola Tanković",
         "averageDuration": "90 dana",
-        "totalSteps": 9
+        "totalSteps": 9,
+        "startedAt": "12.02.2022",
+        "UpdateddAt": "14.07.2022"
     },
     {
         "id": 11,
         "title": "A wooden chair can get uncomfortable.",
         "manager": "Harry Brown",
         "averageDuration": "10 dana",
-        "totalSteps": 4
+        "totalSteps": 4,
+        "startedAt": "12.02.2022",
+        "UpdateddAt": "14.07.2022"
     },
     {
         "id": 12,
         "title": "A wooden chair can get uncomfortable.",
         "manager": "Harry Brown",
         "averageDuration": "10 dana",
-        "totalSteps": 4
+        "totalSteps": 4,
+        "startedAt": "12.02.2022",
+        "UpdateddAt": "14.07.2022"
     },
     {
         "id": 13,
         "title": "A wooden chair can get uncomfortable.",
         "manager": "Harry Brown",
         "averageDuration": "10 dana",
-        "totalSteps": 4
+        "totalSteps": 4,
+        "startedAt": "12.02.2022",
+        "UpdateddAt": "14.07.2022"
     },
     {
         "id": 14,
         "title": "A wooden chair can get uncomfortable.",
         "manager": "Harry Brown",
         "averageDuration": "10 dana",
-        "totalSteps": 4
+        "totalSteps": 4,
+        "startedAt": "12.02.2022",
+        "UpdateddAt": "14.07.2022"
     }
 ]
