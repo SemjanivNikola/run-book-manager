@@ -3,7 +3,7 @@ const fs = require("fs");
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-// require('./database/prepareDB');
+require('./database/prepareDB');
 
 const handler = require('./middleware/handler');
 const runbookHandler = require('./middleware/runbookHandler');
