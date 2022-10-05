@@ -17,13 +17,13 @@ const readList = async (request, response) => {
     const status = request.query.status
 
     try {
-        if (status === "available") {
-            response.status(200).json(availableList);
-        } else if (status === "archive") {
-            response.status(200).json(archiveList);
-        } else {
-            response.status(200).json(activeList);
-        }
+        // if (status === "available") {
+        //     response.status(200).json(availableList);
+        // } else if (status === "archive") {
+        //     response.status(200).json(archiveList);
+        // } else {
+        // }
+        response.status(200).json({ success: "yes" });
     } catch (err) {
         response.status(400).json(err);
     }
