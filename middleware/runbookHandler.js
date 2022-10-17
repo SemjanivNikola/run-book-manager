@@ -342,7 +342,16 @@ const readProcessByID = async (_request, response) => {
     }
 };
 
+const readActionByID = async (_request, response) => {
+    try {
+        response.status(200).json({});
+    } catch (err) {
+        response.status(400).json(err);
+    }
+};
+
 module.exports = {
     readList,
-    readProcessByID
+    readProcessByID,
+    readActionByID
 }

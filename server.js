@@ -37,6 +37,7 @@ app.delete('/view/:id', viewQuery.deleteView); //TODO:
 
 app.get('/process', runbookHandler.readList);
 app.get('/process/:id', runbookHandler.readProcessByID);
+app.get('/process/action/:id', runbookHandler.readActionByID);
 
 app.listen(PORT, () => {
    console.log(`App is running on port ${PORT}`);
