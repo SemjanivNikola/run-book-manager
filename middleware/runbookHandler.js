@@ -20,168 +20,56 @@ const readList = async (request, response) => {
         if (status === "available") {
             response.status(200).json([
                 {
+                    "id": 1,
+                    "title": "Odrađivanje studentske prakse",
+                    "manager": "Nikola Tanković",
+                    "averageDuration": "120 sati",
+                    "totalSteps": 6,
+                },
+                {
+                    "id": 2,
+                    "title": "George works on a small farm.",
+                    "manager": "George Howell",
+                    "averageDuration": "243 dana",
+                    "totalSteps": 23,
+                },
+                {
                     "id": 3,
                     "title": "George works on a small farm.",
                     "manager": "George Howell",
                     "averageDuration": "243 dana",
                     "totalSteps": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 4,
-                    "title": "George works on a small farm.",
-                    "manager": "George Howell",
-                    "averageDuration": "243 dana",
-                    "totalSteps": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 5,
-                    "title": "George works on a small farm.",
-                    "manager": "George Howell",
-                    "averageDuration": "243 dana",
-                    "totalSteps": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 6,
-                    "title": "George works on a small farm.",
-                    "manager": "George Howell",
-                    "averageDuration": "243 dana",
-                    "totalSteps": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 7,
-                    "title": "George works on a small farm.",
-                    "manager": "George Howell",
-                    "averageDuration": "243 dana",
-                    "totalSteps": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 8,
-                    "title": "George works on a small farm.",
-                    "manager": "George Howell",
-                    "averageDuration": "243 dana",
-                    "totalSteps": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 9,
-                    "title": "George works on a small farm.",
-                    "manager": "George Howell",
-                    "averageDuration": "243 dana",
-                    "totalSteps": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 10,
-                    "title": "George works on a small farm.",
-                    "manager": "George Howell",
-                    "averageDuration": "243 dana",
-                    "totalSteps": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
                 }
             ]);
         } else if (status === "archive") {
             response.status(200).json([
                 {
-                    "id": 2,
-                    "title": "Proces prijave prakse",
-                    "manager": "Nikola Tanković",
-                    "averageDuration": "90 dana",
-                    "totalSteps": 9,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
+                    "id": 4,
+                    "title": "Upis u prvu godinu diplomskog",
+                    "manager": "UNIPU",
+                    "progress": 90,
+                    "startedAt": "01.10.2021",
+                    "updatedAt": "05.10.2021"
                 },
                 {
-                    "id": 15,
-                    "title": "Speak English at work",
-                    "manager": "Nikola Tanković",
-                    "averageDuration": "47 dana",
-                    "totalSteps": 7,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
+                    "id": 5,
+                    "title": "Natječaj za dodjelu stipendije",
+                    "manager": "Obrazovni sustav RH",
+                    "progress": 100,
+                    "startedAt": "09.11.2021",
+                    "updatedAt": "30.11.2021"
                 },
-                {
-                    "id": 16,
-                    "title": "Speak English at work",
-                    "manager": "Nikola Tanković",
-                    "averageDuration": "47 dana",
-                    "totalSteps": 7,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 17,
-                    "title": "Speak English at work",
-                    "manager": "Nikola Tanković",
-                    "averageDuration": "47 dana",
-                    "totalSteps": 7,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 18,
-                    "title": "Speak English at work",
-                    "manager": "Nikola Tanković",
-                    "averageDuration": "47 dana",
-                    "totalSteps": 7,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                }
             ]);
         } else {
             response.status(200).json([
                 {
-                    "id": 1,
-                    "title": "Proces prijave prakse",
+                    "id": 6,
+                    "title": "Odrađivanje studentske prakse",
                     "manager": "Nikola Tanković",
-                    "progress": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
+                    "progress": 0,
+                    "startedAt": "12.07.2022",
+                    "updatedAt": "12.07.2022"
                 },
-                {
-                    "id": 11,
-                    "title": "A wooden chair can get uncomfortable.",
-                    "manager": "Harry Brown",
-                    "progress": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 12,
-                    "title": "A wooden chair can get uncomfortable.",
-                    "manager": "Harry Brown",
-                    "progress": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 13,
-                    "title": "A wooden chair can get uncomfortable.",
-                    "manager": "Harry Brown",
-                    "progress": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                },
-                {
-                    "id": 14,
-                    "title": "A wooden chair can get uncomfortable.",
-                    "manager": "Harry Brown",
-                    "progress": 23,
-                    "startedAt": "12.02.2022",
-                    "updatedAt": "14.07.2022"
-                }
             ]);
         }
     } catch (err) {
@@ -192,20 +80,20 @@ const readList = async (request, response) => {
 const readProcessByID = async (_request, response) => {
     try {
         response.status(200).json({
-            "id": 2,
+            "id": 6,
             "info": {
-                "title": "Proces prijave prakse",
+                "title": "Odrađivanje studentske prakse",
                 "description": "Ovdje se nalaze svi detalji vezani uz proces prijave i rješavanja prakse. Sve potrebne poveznice i kratke, ali bitne informacije o pojedinom koraku.",
                 "status": "ACTIVE",
-                "progress": 43,
-                "timeAverage": "3m",
-                "timeTotal": "32h",
-                "stepTotal": 7,
-                "stepDone": 3
+                "progress": 0,
+                "timeAverage": "120 sati",
+                "timeTotal": "0h",
+                "stepTotal": 6,
+                "stepDone": 0
             },
             "currentStep": [
-                2,
-                2
+                0,
+                0
             ],
             "stepList": [
                 [
@@ -216,7 +104,7 @@ const readProcessByID = async (_request, response) => {
                         "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
                         "summary": "Odaberi do 3 preferencije gdje bi želio/la odrađivati praksu.",
                         "actionSummary": null,
-                        "status": "COMPLETED",
+                        "status": "ACTIVE",
                         "urlIndexList": [
                             0,
                             1
@@ -244,7 +132,7 @@ const readProcessByID = async (_request, response) => {
                         "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
                         "summary": "Dodaj pismo i onda cemo te prihvatiti ispred svih ostalih.",
                         "actionSummary": null,
-                        "status": "COMPLETED",
+                        "status": "INACTIVE",
                         "urlIndexList": [
                             0,
                             1
@@ -298,7 +186,7 @@ const readProcessByID = async (_request, response) => {
                         "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
                         "summary": "Odaberi do 3 preferencije gdje bi želio/la odrađivati praksu.",
                         "actionSummary": null,
-                        "status": "ACTIVE",
+                        "status": "INACTIVE",
                         "urlIndexList": [
                             0,
                             1
