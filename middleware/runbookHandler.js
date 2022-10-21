@@ -28,17 +28,17 @@ const readList = async (request, response) => {
                 },
                 {
                     "id": 2,
-                    "title": "George works on a small farm.",
-                    "manager": "George Howell",
-                    "averageDuration": "243 dana",
-                    "totalSteps": 23,
+                    "title": "Upis u višu godinu studija",
+                    "manager": "UNIPU",
+                    "averageDuration": "2 dana",
+                    "totalSteps": 4,
                 },
                 {
                     "id": 3,
-                    "title": "George works on a small farm.",
-                    "manager": "George Howell",
-                    "averageDuration": "243 dana",
-                    "totalSteps": 23,
+                    "title": "Prijava za člana studentskog zbora",
+                    "manager": "Studentski zbor",
+                    "averageDuration": "20 dana",
+                    "totalSteps": 3,
                 }
             ]);
         } else if (status === "archive") {
@@ -85,11 +85,11 @@ const readProcessByID = async (_request, response) => {
                 "title": "Odrađivanje studentske prakse",
                 "description": "Ovdje se nalaze svi detalji vezani uz proces prijave i rješavanja prakse. Sve potrebne poveznice i kratke, ali bitne informacije o pojedinom koraku.",
                 "status": "ACTIVE",
-                "progress": 0,
+                "progress": 67,
                 "timeAverage": "120 sati",
-                "timeTotal": "0h",
+                "timeTotal": "11h",
                 "stepTotal": 6,
-                "stepDone": 0
+                "stepDone": 4
             },
             "currentStep": [
                 0,
@@ -101,129 +101,86 @@ const readProcessByID = async (_request, response) => {
                         "id": 1,
                         "title": "Odabir preferencija za paksu",
                         "caption": "Odabrane preferencije",
-                        "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
-                        "summary": "Odaberi do 3 preferencije gdje bi želio/la odrađivati praksu.",
-                        "actionSummary": null,
+                        "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;).",
+                        "action": {
+                            "id": 1,
+                            "title": "Odaberi preferencije",
+                            "label": "Preferencije"
+                        },
                         "status": "ACTIVE",
-                        "urlIndexList": [
-                            0,
-                            1
-                        ]
                     }
                 ],
                 [
                     {
                         "id": 1,
-                        "title": "Alokacija 1",
+                        "title": "Alociranje na zadatak",
                         "caption": "Potvrda o alokaciji",
                         "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
-                        "summary": "Kada budeš alociran/na za praksu, na mail ćeš primiti potvrdu zajedno s dokumentima potrebnim za prijavu prakse i pisanje dnevnika.",
-                        "actionSummary": null,
+                        "action": null,
                         "status": "INACTIVE",
-                        "urlIndexList": [
-                            0,
-                            1
-                        ]
                     },
-                    {
-                        "id": 2,
-                        "title": "Alokacija 2",
-                        "caption": "Alokacija na praksu",
-                        "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
-                        "summary": "Dodaj pismo i onda cemo te prihvatiti ispred svih ostalih.",
-                        "actionSummary": null,
-                        "status": "INACTIVE",
-                        "urlIndexList": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "id": 3,
-                        "title": "Evaluacija studenta",
-                        "caption": "Potvrda o evaluaciji",
-                        "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
-                        "summary": "Red je na poslodavcu da evaluira tebe kao kandidata. Ukoliko ispuniš njihova očekianja trebao/la bi primiti potvrdu na email i/ili slack. Ako te ne izaberu morati ćeš ponovno odabrati preferencije za praksu.",
-                        "actionSummary": null,
-                        "status": "INACTIVE",
-                        "urlIndexList": [
-                            0,
-                            1
-                        ]
-                    }
                 ],
                 [
                     {
                         "id": 1,
+                        "title": "Evaluiranje kandidata",
+                        "caption": "Povrda o evaluaciji",
+                        "description": "Evaluaciju obavlja firma na koju si alociran/na.",
+                        "action": null,
+                        "status": "INACTIVE",
+                    },
+                ],
+                [
+                    {
+                        "id": 1,
+                        "title": "Odabir preferencija za paksu",
+                        "caption": "Odabrane preferencije",
+                        "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
+                        "action": {
+                            "id": 1,
+                            "title": "Odaberi preferencije",
+                            "label": "Preferencije"
+                        },
+                        "status": "INACTIVE",
+                    },
+                    {
+                        "id": 2,
                         "title": "Ispunjavanje prijavnice",
-                        "caption": "Prijavnica ispunjena",
-                        "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
-                        "summary": "Prijavnica ti stiže na mail odmah nakon pozitivne evaluacije. Nju ispunjavaš i predaješ profesoru. Poveznicu možeš pronaći gore.",
-                        "actionSummary": null,
+                        "caption": "Ispunjena Prijavnica",
+                        "description": "Prijavnicu možeš ispuniti kroz aplikaciju. Samo pokreni akciju.",
+                        "action": {
+                            "id": 2,
+                            "title": "Ispuni prijavnicu",
+                            "label": "Prijavnica"
+                        },
                         "status": "INACTIVE",
-                        "urlIndexList": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "id": 2,
-                        "title": "Odabir preferencija za paksu",
-                        "caption": "Odabrane preferencije",
-                        "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
-                        "summary": "Odaberi do 3 preferencije gdje bi želio/la odrađivati praksu.",
-                        "actionSummary": null,
-                        "status": "INACTIVE",
-                        "urlIndexList": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "id": 3,
-                        "title": "Odabir preferencija za paksu",
-                        "caption": "Odabrane preferencije",
-                        "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
-                        "summary": "Odaberi do 3 preferencije gdje bi želio/la odrađivati praksu.",
-                        "actionSummary": null,
-                        "status": "INACTIVE",
-                        "urlIndexList": [
-                            0,
-                            1
-                        ]
                     }
                 ],
                 [
                     {
                         "id": 1,
-                        "title": "Odabir preferencija za paksu",
-                        "caption": "Odabrane preferencije",
-                        "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
-                        "summary": "Odaberi do 3 preferencije gdje bi želio/la odrađivati praksu.",
-                        "actionSummary": null,
+                        "title": "Predaja dnevnika prakse",
+                        "caption": "Dnevnik prakse predan",
+                        "description": "Predati dnevnik prakse možeš kroz aplikaciju.",
+                        "action": {
+                            "id": 3,
+                            "title": "Predaj dnevnik prakse",
+                            "label": "Dnevnik prakse"
+                        },
                         "status": "INACTIVE",
-                        "urlIndexList": []
+                    },
+                ],
+                [
+                    {
+                        "id": 1,
+                        "title": "Prijava ispita",
+                        "caption": "Prijava ispita",
+                        "description": "Ispit prijavljuješ preko sutomata.",
+                        "action": "https://www.isvu.hr/studomat/hr/prijava",
+                        "status": "INACTIVE",
                     }
                 ]
             ],
-            "urlList": [
-                {
-                    "title": "Pogledaj zanimljive i slobodne projekte ovdje",
-                    "url": "http://www.google.com"
-                },
-                {
-                    "title": "Prijavi se na 3 najdraža zadatka",
-                    "url": "http://www.google.com"
-                },
-                {
-                    "title": "Možeš predati projekt ovdje",
-                    "url": "http://www.google.com"
-                },
-                {
-                    "title": "Prijavi rok za obranu",
-                    "url": "http://www.google.com"
-                }
-            ]
         });
     } catch (err) {
         response.status(400).json(err);
