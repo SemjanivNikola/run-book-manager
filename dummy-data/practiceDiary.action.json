@@ -7,7 +7,7 @@
     "sections": {
         "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e": {
             "uniqueId": "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e",
-            "headline": "JMBAG",
+            "headline": "",
             "subHeadline": "",
             "isShowHeadline": false,
             "sortOrder": 1,
@@ -20,8 +20,7 @@
                 "control-987be1d6-80fd-447d-a3ac-0dbfa92faae7",
                 "control-54ae0651-f401-4bec-a709-6315f154b82c",
                 "control-6f665b49-c146-413e-a28c-24e3919d25cc",
-                "control-c18e8c84-c8fa-475d-ac49-7dc1a59ebafd",
-                "control-2753053e-d89c-4831-9373-0cff2892f128"
+                "control-c18e8c84-c8fa-475d-ac49-7dc1a59ebafd"
             ]
         }
     },
@@ -31,13 +30,13 @@
             "uniqueId": "control-b12100b5-226d-4965-aef6-4c332c75bc8a",
             "type": "dropDown",
             "name": "student",
-            "label": "Student *",
+            "label": "Student",
             "subLabel": "",
             "isShowLabel": true,
             "placeholderText": "",
             "containerClass": "col-md-12 md-layout-item md-size-100",
             "additionalLabelClass": "pt-3",
-            "defaultValue": "",
+            "defaultValue": null,
             "defaultValueForAutocomplete": [],
             "rows": [],
             "validations": [
@@ -53,8 +52,12 @@
             "dataMode": "list",
             "items": [
                 {
+                    "value": null,
+                    "text": "Odaberi"
+                },
+                {
                     "value": "1",
-                    "text": "3. preddiplomski"
+                    "text": "Nikola Semjaniv"
                 }
             ],
             "apiURL": "",
@@ -213,7 +216,7 @@
             "name": "submit",
             "label": "Predaj",
             "subLabel": "",
-            "isShowLabel": false,
+            "isShowLabel": true,
             "placeholderText": "",
             "containerClass": "col-md-6 md-layout-item md-size-50",
             "additionalLabelClass": "pt-3",
@@ -226,30 +229,6 @@
             "multiple": false,
             "buttonClass": "btn btn-success md-button md-raised md-success md-theme-default",
             "buttonType": "submit",
-            "postLink": "",
-            "emitEventCode": "",
-            "emitEventData": "",
-            "isRunValidation": true
-        },
-        "control-2753053e-d89c-4831-9373-0cff2892f128": {
-            "uniqueId": "control-2753053e-d89c-4831-9373-0cff2892f128",
-            "type": "button",
-            "name": "save",
-            "label": "Spremi",
-            "subLabel": "",
-            "isShowLabel": false,
-            "placeholderText": "",
-            "containerClass": "col-md-6 md-layout-item md-size-50",
-            "additionalLabelClass": "pt-3",
-            "defaultValue": "",
-            "defaultValueForAutocomplete": [],
-            "rows": [],
-            "validations": [],
-            "autocompleteLink": "",
-            "autocomplete": [],
-            "multiple": false,
-            "buttonClass": "btn btn-default md-button md-raised md-default md-theme-default",
-            "buttonType": "button",
             "postLink": "",
             "emitEventCode": "",
             "emitEventData": "",

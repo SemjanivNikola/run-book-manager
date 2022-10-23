@@ -197,8 +197,8 @@ const readActionByID = async (request, response) => {
              */
             response.status(200).json({
                 "formConfig": {
-                    "headline": "Prijavnica na praksu",
-                    "subHeadline": "VAŽNO: Prijavnica se popunjava nakon (!) što nastavnik odobri kontakt određenom poduzeću i nakon što student s tim poduzećem dogovori praksu. Popunjenu prijavnicu šaljemo poduzeću na odobrenje i potpis.",
+                    "headline": "Studentska prijava na projekt prakse",
+                    "subHeadline": "Student odabire prvu, drugu i treću preferenciju.",
                     "isShowHeadline": true
                 },
                 "sections": {
@@ -229,7 +229,7 @@ const readActionByID = async (request, response) => {
                         "name": "jmbag",
                         "label": "JMBAG",
                         "subLabel": "",
-                        "isShowLabel": false,
+                        "isShowLabel": true,
                         "placeholderText": "",
                         "containerClass": "col-md-12 md-layout-item md-size-100",
                         "additionalLabelClass": "pt-3",
@@ -245,7 +245,7 @@ const readActionByID = async (request, response) => {
                         ],
                         "autocompleteLink": "",
                         "autocomplete": [],
-                        "multiple": false
+                        "multiple": true
                     },
                     "control-e31ed0a8-3702-44a0-bed3-32969f7a4f25": {
                         "uniqueId": "control-e31ed0a8-3702-44a0-bed3-32969f7a4f25",
@@ -253,7 +253,7 @@ const readActionByID = async (request, response) => {
                         "name": "name",
                         "label": "Ime i prezime",
                         "subLabel": "",
-                        "isShowLabel": false,
+                        "isShowLabel": true,
                         "placeholderText": "",
                         "containerClass": "col-md-12 md-layout-item md-size-100",
                         "additionalLabelClass": "pt-3",
@@ -281,7 +281,7 @@ const readActionByID = async (request, response) => {
                         "placeholderText": "",
                         "containerClass": "col-md-12 md-layout-item md-size-100",
                         "additionalLabelClass": "pt-3",
-                        "defaultValue": "",
+                        "defaultValue": null,
                         "defaultValueForAutocomplete": [],
                         "rows": [],
                         "validations": [
@@ -296,6 +296,10 @@ const readActionByID = async (request, response) => {
                         "multiple": false,
                         "dataMode": "list",
                         "items": [
+                            {
+                                "value": null,
+                                "text": "Odaberi"
+                            },
                             {
                                 "value": "1",
                                 "text": "3. preddiplomski"
@@ -323,7 +327,7 @@ const readActionByID = async (request, response) => {
                         "placeholderText": "",
                         "containerClass": "col-md-12 md-layout-item md-size-100",
                         "additionalLabelClass": "pt-3",
-                        "defaultValue": "",
+                        "defaultValue": null,
                         "defaultValueForAutocomplete": [],
                         "rows": [],
                         "validations": [
@@ -338,6 +342,10 @@ const readActionByID = async (request, response) => {
                         "multiple": false,
                         "dataMode": "list",
                         "items": [
+                            {
+                                "value": null,
+                                "text": "Odaberi"
+                            },
                             {
                                 "value": "60",
                                 "text": "ZADATAK 60 - PLAVA TVORNICA d.o.o."
@@ -369,11 +377,11 @@ const readActionByID = async (request, response) => {
                         "name": "secondChoice",
                         "label": "Drugi odabir",
                         "subLabel": "",
-                        "isShowLabel": false,
+                        "isShowLabel": true,
                         "placeholderText": "",
                         "containerClass": "col-md-12 md-layout-item md-size-100",
                         "additionalLabelClass": "pt-3",
-                        "defaultValue": "",
+                        "defaultValue": null,
                         "defaultValueForAutocomplete": [],
                         "rows": [],
                         "validations": [
@@ -388,6 +396,10 @@ const readActionByID = async (request, response) => {
                         "multiple": false,
                         "dataMode": "list",
                         "items": [
+                            {
+                                "value": null,
+                                "text": "Odaberi"
+                            },
                             {
                                 "value": "60",
                                 "text": "ZADATAK 60 - PLAVA TVORNICA d.o.o."
@@ -419,11 +431,11 @@ const readActionByID = async (request, response) => {
                         "name": "thirdChoice",
                         "label": "Treći odabir",
                         "subLabel": "",
-                        "isShowLabel": false,
+                        "isShowLabel": true,
                         "placeholderText": "",
                         "containerClass": "col-md-12 md-layout-item md-size-100",
                         "additionalLabelClass": "pt-3",
-                        "defaultValue": "",
+                        "defaultValue": null,
                         "defaultValueForAutocomplete": [],
                         "rows": [],
                         "validations": [
@@ -438,6 +450,10 @@ const readActionByID = async (request, response) => {
                         "multiple": false,
                         "dataMode": "list",
                         "items": [
+                            {
+                                "value": null,
+                                "text": "Odaberi"
+                            },
                             {
                                 "value": "60",
                                 "text": "ZADATAK 60 - PLAVA TVORNICA d.o.o."
@@ -469,7 +485,7 @@ const readActionByID = async (request, response) => {
                         "name": "submit",
                         "label": "Prijavi",
                         "subLabel": "",
-                        "isShowLabel": false,
+                        "isShowLabel": true,
                         "placeholderText": "",
                         "containerClass": "col-md-6 md-layout-item md-size-50",
                         "additionalLabelClass": "pt-3",
@@ -502,7 +518,7 @@ const readActionByID = async (request, response) => {
                 "sections": {
                     "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e": {
                         "uniqueId": "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e",
-                        "headline": "JMBAG",
+                        "headline": "",
                         "subHeadline": "",
                         "isShowHeadline": false,
                         "sortOrder": 1,
@@ -587,7 +603,7 @@ const readActionByID = async (request, response) => {
                         "placeholderText": "",
                         "containerClass": "col-md-12 md-layout-item md-size-100",
                         "additionalLabelClass": "pt-3",
-                        "defaultValue": "",
+                        "defaultValue": null,
                         "defaultValueForAutocomplete": [],
                         "rows": [],
                         "validations": [
@@ -603,8 +619,12 @@ const readActionByID = async (request, response) => {
                         "dataMode": "list",
                         "items": [
                             {
+                                "value": null,
+                                "text": "Odaberi"
+                            },
+                            {
                                 "value": "1",
-                                "text": "3. preddiplomski"
+                                "text": "Nikola Semjaniv"
                             }
                         ],
                         "apiURL": "",
@@ -621,7 +641,7 @@ const readActionByID = async (request, response) => {
                         "placeholderText": "",
                         "containerClass": "col-md-12 md-layout-item md-size-100",
                         "additionalLabelClass": "pt-3",
-                        "defaultValue": "",
+                        "defaultValue": null,
                         "defaultValueForAutocomplete": [],
                         "rows": [],
                         "validations": [
@@ -635,7 +655,32 @@ const readActionByID = async (request, response) => {
                         "autocomplete": [],
                         "multiple": false,
                         "dataMode": "list",
-                        "items": [],
+                        "items": [
+                            {
+                                "value": null,
+                                "text": "Odaberi"
+                            },
+                            {
+                                "value": "60",
+                                "text": "ZADATAK 60 - PLAVA TVORNICA d.o.o."
+                            },
+                            {
+                                "value": "110",
+                                "text": "ZADATAK 110 - Speck d.o.o."
+                            },
+                            {
+                                "value": "111",
+                                "text": "ZADATAK 111 - Lescal Digital d.o.o."
+                            },
+                            {
+                                "value": "112",
+                                "text": "ZADATAK 112 - Lescal Digital d.o.o."
+                            },
+                            {
+                                "value": "113",
+                                "text": "ZADATAK 113 - Spectral Core d.o.o."
+                            }
+                        ],
                         "apiURL": "",
                         "apiTextKey": "text",
                         "apiValueKey": "value"
@@ -926,7 +971,7 @@ const readActionByID = async (request, response) => {
                         "name": "submit",
                         "label": "Prijavi",
                         "subLabel": "",
-                        "isShowLabel": false,
+                        "isShowLabel": true,
                         "placeholderText": "",
                         "containerClass": "col-md-6 md-layout-item md-size-50",
                         "additionalLabelClass": "pt-3",
@@ -959,7 +1004,7 @@ const readActionByID = async (request, response) => {
                 "sections": {
                     "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e": {
                         "uniqueId": "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e",
-                        "headline": "JMBAG",
+                        "headline": "",
                         "subHeadline": "",
                         "isShowHeadline": false,
                         "sortOrder": 1,
@@ -988,7 +1033,7 @@ const readActionByID = async (request, response) => {
                         "placeholderText": "",
                         "containerClass": "col-md-12 md-layout-item md-size-100",
                         "additionalLabelClass": "pt-3",
-                        "defaultValue": "",
+                        "defaultValue": null,
                         "defaultValueForAutocomplete": [],
                         "rows": [],
                         "validations": [
@@ -1004,8 +1049,12 @@ const readActionByID = async (request, response) => {
                         "dataMode": "list",
                         "items": [
                             {
+                                "value": null,
+                                "text": "Odaberi"
+                            },
+                            {
                                 "value": "1",
-                                "text": "3. preddiplomski"
+                                "text": "Nikola Semjaniv"
                             }
                         ],
                         "apiURL": "",
@@ -1164,7 +1213,7 @@ const readActionByID = async (request, response) => {
                         "name": "submit",
                         "label": "Predaj",
                         "subLabel": "",
-                        "isShowLabel": false,
+                        "isShowLabel": true,
                         "placeholderText": "",
                         "containerClass": "col-md-6 md-layout-item md-size-50",
                         "additionalLabelClass": "pt-3",

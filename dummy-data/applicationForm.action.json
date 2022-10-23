@@ -7,7 +7,7 @@
     "sections": {
         "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e": {
             "uniqueId": "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e",
-            "headline": "JMBAG",
+            "headline": "",
             "subHeadline": "",
             "isShowHeadline": false,
             "sortOrder": 1,
@@ -92,7 +92,7 @@
             "placeholderText": "",
             "containerClass": "col-md-12 md-layout-item md-size-100",
             "additionalLabelClass": "pt-3",
-            "defaultValue": "",
+            "defaultValue": null,
             "defaultValueForAutocomplete": [],
             "rows": [],
             "validations": [
@@ -108,8 +108,12 @@
             "dataMode": "list",
             "items": [
                 {
+                    "value": null,
+                    "text": "Odaberi"
+                },
+                {
                     "value": "1",
-                    "text": "3. preddiplomski"
+                    "text": "Nikola Semjaniv"
                 }
             ],
             "apiURL": "",
@@ -126,7 +130,7 @@
             "placeholderText": "",
             "containerClass": "col-md-12 md-layout-item md-size-100",
             "additionalLabelClass": "pt-3",
-            "defaultValue": "",
+            "defaultValue": null,
             "defaultValueForAutocomplete": [],
             "rows": [],
             "validations": [
@@ -140,7 +144,32 @@
             "autocomplete": [],
             "multiple": false,
             "dataMode": "list",
-            "items": [],
+            "items": [
+                {
+                    "value": null,
+                    "text": "Odaberi"
+                },
+                {
+                    "value": "60",
+                    "text": "ZADATAK 60 - PLAVA TVORNICA d.o.o."
+                },
+                {
+                    "value": "110",
+                    "text": "ZADATAK 110 - Speck d.o.o."
+                },
+                {
+                    "value": "111",
+                    "text": "ZADATAK 111 - Lescal Digital d.o.o."
+                },
+                {
+                    "value": "112",
+                    "text": "ZADATAK 112 - Lescal Digital d.o.o."
+                },
+                {
+                    "value": "113",
+                    "text": "ZADATAK 113 - Spectral Core d.o.o."
+                }
+            ],
             "apiURL": "",
             "apiTextKey": "text",
             "apiValueKey": "value"
@@ -431,7 +460,7 @@
             "name": "submit",
             "label": "Prijavi",
             "subLabel": "",
-            "isShowLabel": false,
+            "isShowLabel": true,
             "placeholderText": "",
             "containerClass": "col-md-6 md-layout-item md-size-50",
             "additionalLabelClass": "pt-3",

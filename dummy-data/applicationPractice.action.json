@@ -1,7 +1,7 @@
 {
     "formConfig": {
-        "headline": "Prijavnica na praksu",
-        "subHeadline": "VAŽNO: Prijavnica se popunjava nakon (!) što nastavnik odobri kontakt određenom poduzeću i nakon što student s tim poduzećem dogovori praksu. Popunjenu prijavnicu šaljemo poduzeću na odobrenje i potpis.",
+        "headline": "Studentska prijava na projekt prakse",
+        "subHeadline": "Student odabire prvu, drugu i treću preferenciju.",
         "isShowHeadline": true
     },
     "sections": {
@@ -32,7 +32,7 @@
             "name": "jmbag",
             "label": "JMBAG",
             "subLabel": "",
-            "isShowLabel": false,
+            "isShowLabel": true,
             "placeholderText": "",
             "containerClass": "col-md-12 md-layout-item md-size-100",
             "additionalLabelClass": "pt-3",
@@ -48,7 +48,7 @@
             ],
             "autocompleteLink": "",
             "autocomplete": [],
-            "multiple": false
+            "multiple": true
         },
         "control-e31ed0a8-3702-44a0-bed3-32969f7a4f25": {
             "uniqueId": "control-e31ed0a8-3702-44a0-bed3-32969f7a4f25",
@@ -56,7 +56,7 @@
             "name": "name",
             "label": "Ime i prezime",
             "subLabel": "",
-            "isShowLabel": false,
+            "isShowLabel": true,
             "placeholderText": "",
             "containerClass": "col-md-12 md-layout-item md-size-100",
             "additionalLabelClass": "pt-3",
@@ -84,7 +84,7 @@
             "placeholderText": "",
             "containerClass": "col-md-12 md-layout-item md-size-100",
             "additionalLabelClass": "pt-3",
-            "defaultValue": "",
+            "defaultValue": null,
             "defaultValueForAutocomplete": [],
             "rows": [],
             "validations": [
@@ -99,6 +99,10 @@
             "multiple": false,
             "dataMode": "list",
             "items": [
+                {
+                    "value": null,
+                    "text": "Odaberi"
+                },
                 {
                     "value": "1",
                     "text": "3. preddiplomski"
@@ -126,7 +130,7 @@
             "placeholderText": "",
             "containerClass": "col-md-12 md-layout-item md-size-100",
             "additionalLabelClass": "pt-3",
-            "defaultValue": "",
+            "defaultValue": null,
             "defaultValueForAutocomplete": [],
             "rows": [],
             "validations": [
@@ -141,6 +145,10 @@
             "multiple": false,
             "dataMode": "list",
             "items": [
+                {
+                    "value": null,
+                    "text": "Odaberi"
+                },
                 {
                     "value": "60",
                     "text": "ZADATAK 60 - PLAVA TVORNICA d.o.o."
@@ -172,11 +180,11 @@
             "name": "secondChoice",
             "label": "Drugi odabir",
             "subLabel": "",
-            "isShowLabel": false,
+            "isShowLabel": true,
             "placeholderText": "",
             "containerClass": "col-md-12 md-layout-item md-size-100",
             "additionalLabelClass": "pt-3",
-            "defaultValue": "",
+            "defaultValue": null,
             "defaultValueForAutocomplete": [],
             "rows": [],
             "validations": [
@@ -191,6 +199,10 @@
             "multiple": false,
             "dataMode": "list",
             "items": [
+                {
+                    "value": null,
+                    "text": "Odaberi"
+                },
                 {
                     "value": "60",
                     "text": "ZADATAK 60 - PLAVA TVORNICA d.o.o."
@@ -222,11 +234,11 @@
             "name": "thirdChoice",
             "label": "Treći odabir",
             "subLabel": "",
-            "isShowLabel": false,
+            "isShowLabel": true,
             "placeholderText": "",
             "containerClass": "col-md-12 md-layout-item md-size-100",
             "additionalLabelClass": "pt-3",
-            "defaultValue": "",
+            "defaultValue": null,
             "defaultValueForAutocomplete": [],
             "rows": [],
             "validations": [
@@ -241,6 +253,10 @@
             "multiple": false,
             "dataMode": "list",
             "items": [
+                {
+                    "value": null,
+                    "text": "Odaberi"
+                },
                 {
                     "value": "60",
                     "text": "ZADATAK 60 - PLAVA TVORNICA d.o.o."
@@ -272,7 +288,7 @@
             "name": "submit",
             "label": "Prijavi",
             "subLabel": "",
-            "isShowLabel": false,
+            "isShowLabel": true,
             "placeholderText": "",
             "containerClass": "col-md-6 md-layout-item md-size-50",
             "additionalLabelClass": "pt-3",
