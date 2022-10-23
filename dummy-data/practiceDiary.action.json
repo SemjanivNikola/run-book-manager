@@ -1,0 +1,259 @@
+{
+    "formConfig": {
+        "headline": "Predaja dnevnika prakse",
+        "subHeadline": "Template za dnevnik dostupan je na http://bit.ly/fipu-praksa-template Dnevnik je potrebno predati prije prijave ispitnoga roka.",
+        "isShowHeadline": true
+    },
+    "sections": {
+        "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e": {
+            "uniqueId": "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e",
+            "headline": "JMBAG",
+            "subHeadline": "",
+            "isShowHeadline": false,
+            "sortOrder": 1,
+            "type": "normal",
+            "rows": [],
+            "controls": [
+                "control-b12100b5-226d-4965-aef6-4c332c75bc8a",
+                "control-5bc9af83-6d54-4705-851e-175583217207",
+                "control-253df9ff-f90e-4529-9535-4d58b0d3eeb3",
+                "control-987be1d6-80fd-447d-a3ac-0dbfa92faae7",
+                "control-54ae0651-f401-4bec-a709-6315f154b82c",
+                "control-6f665b49-c146-413e-a28c-24e3919d25cc",
+                "control-c18e8c84-c8fa-475d-ac49-7dc1a59ebafd",
+                "control-2753053e-d89c-4831-9373-0cff2892f128"
+            ]
+        }
+    },
+    "rows": {},
+    "controls": {
+        "control-b12100b5-226d-4965-aef6-4c332c75bc8a": {
+            "uniqueId": "control-b12100b5-226d-4965-aef6-4c332c75bc8a",
+            "type": "dropDown",
+            "name": "student",
+            "label": "Student *",
+            "subLabel": "",
+            "isShowLabel": true,
+            "placeholderText": "",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [
+                {
+                    "ruleType": "required",
+                    "errorMessage": "Ovo polje je obavezno",
+                    "additionalValue": ""
+                }
+            ],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "dataMode": "list",
+            "items": [
+                {
+                    "value": "1",
+                    "text": "3. preddiplomski"
+                }
+            ],
+            "apiURL": "",
+            "apiTextKey": "text",
+            "apiValueKey": "value"
+        },
+        "control-5bc9af83-6d54-4705-851e-175583217207": {
+            "uniqueId": "control-5bc9af83-6d54-4705-851e-175583217207",
+            "type": "fileUploader",
+            "name": "",
+            "label": "PDF dnevnika prakse",
+            "subLabel": "(obavezno PDF!)\nObrazac: http://bit.ly/fipu-praksa-template",
+            "isShowLabel": true,
+            "placeholderText": "",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [
+                {
+                    "ruleType": "required",
+                    "errorMessage": "Ovo polje je obavezno",
+                    "additionalValue": ""
+                }
+            ],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "postActionURL": "",
+            "extensions": ".pdf",
+            "maxSize": "0",
+            "isMultiple": false,
+            "maximumFiles": 1,
+            "defaultDropzoneMessage": "&#9729; Ubaci PDF ovdje"
+        },
+        "control-253df9ff-f90e-4529-9535-4d58b0d3eeb3": {
+            "uniqueId": "control-253df9ff-f90e-4529-9535-4d58b0d3eeb3",
+            "type": "fileUploader",
+            "name": "",
+            "label": "PDF sken ispunjene potvrde o obavljenoj praksi",
+            "subLabel": "(obavezno PDF!) Dostaviti tajnici ili Nikoli Tankoviću i u fizičkom obliku.",
+            "isShowLabel": true,
+            "placeholderText": "",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [
+                {
+                    "ruleType": "required",
+                    "errorMessage": "Ovo polje je obavezno",
+                    "additionalValue": ""
+                }
+            ],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "postActionURL": "",
+            "extensions": ".pdf",
+            "maxSize": "0",
+            "isMultiple": false,
+            "maximumFiles": 1,
+            "defaultDropzoneMessage": "&#9729; Ubaci PDF ovdje"
+        },
+        "control-54ae0651-f401-4bec-a709-6315f154b82c": {
+            "uniqueId": "control-54ae0651-f401-4bec-a709-6315f154b82c",
+            "type": "date",
+            "name": "deadline",
+            "label": "Prijevljen rok",
+            "subLabel": "Rok na Studomatu na kojem se unosi ocjena, mora biti prijavljen!",
+            "isShowLabel": true,
+            "placeholderText": "dd/m/yyyy",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [
+                {
+                    "ruleType": "required",
+                    "errorMessage": "Ovo polje je obavezno",
+                    "additionalValue": ""
+                }
+            ],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "format": "DD/MM/YYYY",
+            "firstDay": 1,
+            "numberOfMonths": 1,
+            "numberOfColumns": 1,
+            "minDate": null,
+            "maxDate": null,
+            "singleMode": true,
+            "minDays": 0,
+            "maxDays": 0,
+            "returnType": "format"
+        },
+        "control-987be1d6-80fd-447d-a3ac-0dbfa92faae7": {
+            "uniqueId": "control-987be1d6-80fd-447d-a3ac-0dbfa92faae7",
+            "type": "checkbox",
+            "name": "continueWork",
+            "label": "Označi ako nastavljaš i dalje raditi u tvrtci ili ćeš ubrzo početi raditi honorarno",
+            "subLabel": "",
+            "isShowLabel": true,
+            "placeholderText": "",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "displayMode": "line",
+            "position": "left",
+            "items": [
+                {
+                    "value": "1",
+                    "text": ""
+                }
+            ]
+        },
+        "control-6f665b49-c146-413e-a28c-24e3919d25cc": {
+            "uniqueId": "control-6f665b49-c146-413e-a28c-24e3919d25cc",
+            "type": "checkbox",
+            "name": "emailCopy",
+            "label": "",
+            "subLabel": "",
+            "isShowLabel": true,
+            "placeholderText": "",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "displayMode": "line",
+            "position": "left",
+            "items": [
+                {
+                    "value": "1",
+                    "text": "Pošalji mi kopiju prijavnice na email"
+                }
+            ]
+        },
+        "control-c18e8c84-c8fa-475d-ac49-7dc1a59ebafd": {
+            "uniqueId": "control-c18e8c84-c8fa-475d-ac49-7dc1a59ebafd",
+            "type": "button",
+            "name": "submit",
+            "label": "Predaj",
+            "subLabel": "",
+            "isShowLabel": false,
+            "placeholderText": "",
+            "containerClass": "col-md-6 md-layout-item md-size-50",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "buttonClass": "btn btn-success md-button md-raised md-success md-theme-default",
+            "buttonType": "submit",
+            "postLink": "",
+            "emitEventCode": "",
+            "emitEventData": "",
+            "isRunValidation": true
+        },
+        "control-2753053e-d89c-4831-9373-0cff2892f128": {
+            "uniqueId": "control-2753053e-d89c-4831-9373-0cff2892f128",
+            "type": "button",
+            "name": "save",
+            "label": "Spremi",
+            "subLabel": "",
+            "isShowLabel": false,
+            "placeholderText": "",
+            "containerClass": "col-md-6 md-layout-item md-size-50",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "buttonClass": "btn btn-default md-button md-raised md-default md-theme-default",
+            "buttonType": "button",
+            "postLink": "",
+            "emitEventCode": "",
+            "emitEventData": "",
+            "isRunValidation": true
+        }
+    }
+}

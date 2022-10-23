@@ -1,0 +1,294 @@
+{
+    "formConfig": {
+        "headline": "Prijavnica na praksu",
+        "subHeadline": "VAŽNO: Prijavnica se popunjava nakon (!) što nastavnik odobri kontakt određenom poduzeću i nakon što student s tim poduzećem dogovori praksu. Popunjenu prijavnicu šaljemo poduzeću na odobrenje i potpis.",
+        "isShowHeadline": true
+    },
+    "sections": {
+        "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e": {
+            "uniqueId": "section-4d9dba36-e544-44ae-8ea4-4122b0c9796e",
+            "headline": "",
+            "subHeadline": "",
+            "isShowHeadline": false,
+            "sortOrder": 1,
+            "type": "normal",
+            "rows": [],
+            "controls": [
+                "control-0c640bab-b63b-4a34-a4a7-ec87e96218e9",
+                "control-e31ed0a8-3702-44a0-bed3-32969f7a4f25",
+                "control-b12100b5-226d-4965-aef6-4c332c75bc8a",
+                "control-8ae887ea-59c1-46a4-81e1-3d64555a9dbf",
+                "control-987be1d6-80fd-447d-a3ac-0dbfa92faae7",
+                "control-73d656bc-b435-4dee-a3e6-acfc944a4375",
+                "control-c18e8c84-c8fa-475d-ac49-7dc1a59ebafd"
+            ]
+        }
+    },
+    "rows": {},
+    "controls": {
+        "control-0c640bab-b63b-4a34-a4a7-ec87e96218e9": {
+            "uniqueId": "control-0c640bab-b63b-4a34-a4a7-ec87e96218e9",
+            "type": "input",
+            "name": "jmbag",
+            "label": "JMBAG",
+            "subLabel": "",
+            "isShowLabel": false,
+            "placeholderText": "",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [
+                {
+                    "ruleType": "required",
+                    "errorMessage": "Ovo polje je obavezno",
+                    "additionalValue": ""
+                }
+            ],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false
+        },
+        "control-e31ed0a8-3702-44a0-bed3-32969f7a4f25": {
+            "uniqueId": "control-e31ed0a8-3702-44a0-bed3-32969f7a4f25",
+            "type": "input",
+            "name": "name",
+            "label": "Ime i prezime",
+            "subLabel": "",
+            "isShowLabel": false,
+            "placeholderText": "",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [
+                {
+                    "ruleType": "required",
+                    "errorMessage": "Ovo polje je obavezno",
+                    "additionalValue": ""
+                }
+            ],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false
+        },
+        "control-b12100b5-226d-4965-aef6-4c332c75bc8a": {
+            "uniqueId": "control-b12100b5-226d-4965-aef6-4c332c75bc8a",
+            "type": "dropDown",
+            "name": "yearOfStudy",
+            "label": "Godina studija",
+            "subLabel": "",
+            "isShowLabel": true,
+            "placeholderText": "",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [
+                {
+                    "ruleType": "required",
+                    "errorMessage": "Ovo polje je obavezno",
+                    "additionalValue": ""
+                }
+            ],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "dataMode": "list",
+            "items": [
+                {
+                    "value": "1",
+                    "text": "3. preddiplomski"
+                },
+                {
+                    "value": "2",
+                    "text": "1. diplomski"
+                },
+                {
+                    "value": "3",
+                    "text": "2. diplomski"
+                }
+            ],
+            "apiURL": "",
+            "apiTextKey": "text",
+            "apiValueKey": "value"
+        },
+        "control-8ae887ea-59c1-46a4-81e1-3d64555a9dbf": {
+            "uniqueId": "control-8ae887ea-59c1-46a4-81e1-3d64555a9dbf",
+            "type": "dropDown",
+            "name": "firstChoice",
+            "label": "Prvi odabir",
+            "subLabel": "Odabrati ID Zadatka iz bit.ly/fipu-praksa-zadaciAdd",
+            "isShowLabel": true,
+            "placeholderText": "",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [
+                {
+                    "ruleType": "required",
+                    "errorMessage": "Ovo polje je obavezno",
+                    "additionalValue": ""
+                }
+            ],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "dataMode": "list",
+            "items": [
+                {
+                    "value": "60",
+                    "text": "ZADATAK 60 - PLAVA TVORNICA d.o.o."
+                },
+                {
+                    "value": "110",
+                    "text": "ZADATAK 110 - Speck d.o.o."
+                },
+                {
+                    "value": "111",
+                    "text": "ZADATAK 111 - Lescal Digital d.o.o."
+                },
+                {
+                    "value": "112",
+                    "text": "ZADATAK 112 - Lescal Digital d.o.o."
+                },
+                {
+                    "value": "113",
+                    "text": "ZADATAK 113 - Spectral Core d.o.o."
+                }
+            ],
+            "apiURL": "",
+            "apiTextKey": "text",
+            "apiValueKey": "value"
+        },
+        "control-987be1d6-80fd-447d-a3ac-0dbfa92faae7": {
+            "uniqueId": "control-987be1d6-80fd-447d-a3ac-0dbfa92faae7",
+            "type": "dropDown",
+            "name": "secondChoice",
+            "label": "Drugi odabir",
+            "subLabel": "",
+            "isShowLabel": false,
+            "placeholderText": "",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [
+                {
+                    "ruleType": "required",
+                    "errorMessage": "Ovo polje je obavezno",
+                    "additionalValue": ""
+                }
+            ],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "dataMode": "list",
+            "items": [
+                {
+                    "value": "60",
+                    "text": "ZADATAK 60 - PLAVA TVORNICA d.o.o."
+                },
+                {
+                    "value": "110",
+                    "text": "ZADATAK 110 - Speck d.o.o."
+                },
+                {
+                    "value": "111",
+                    "text": "ZADATAK 111 - Lescal Digital d.o.o."
+                },
+                {
+                    "value": "112",
+                    "text": "ZADATAK 112 - Lescal Digital d.o.o."
+                },
+                {
+                    "value": "113",
+                    "text": "ZADATAK 113 - Spectral Core d.o.o."
+                }
+            ],
+            "apiURL": "",
+            "apiTextKey": "text",
+            "apiValueKey": "value"
+        },
+        "control-73d656bc-b435-4dee-a3e6-acfc944a4375": {
+            "uniqueId": "control-73d656bc-b435-4dee-a3e6-acfc944a4375",
+            "type": "dropDown",
+            "name": "thirdChoice",
+            "label": "Treći odabir",
+            "subLabel": "",
+            "isShowLabel": false,
+            "placeholderText": "",
+            "containerClass": "col-md-12 md-layout-item md-size-100",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [
+                {
+                    "ruleType": "required",
+                    "errorMessage": "Ovo polje je obavezno",
+                    "additionalValue": ""
+                }
+            ],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "dataMode": "list",
+            "items": [
+                {
+                    "value": "60",
+                    "text": "ZADATAK 60 - PLAVA TVORNICA d.o.o."
+                },
+                {
+                    "value": "110",
+                    "text": "ZADATAK 110 - Speck d.o.o."
+                },
+                {
+                    "value": "111",
+                    "text": "ZADATAK 111 - Lescal Digital d.o.o."
+                },
+                {
+                    "value": "112",
+                    "text": "ZADATAK 112 - Lescal Digital d.o.o."
+                },
+                {
+                    "value": "113",
+                    "text": "ZADATAK 113 - Spectral Core d.o.o."
+                }
+            ],
+            "apiURL": "",
+            "apiTextKey": "text",
+            "apiValueKey": "value"
+        },
+        "control-c18e8c84-c8fa-475d-ac49-7dc1a59ebafd": {
+            "uniqueId": "control-c18e8c84-c8fa-475d-ac49-7dc1a59ebafd",
+            "type": "button",
+            "name": "submit",
+            "label": "Prijavi",
+            "subLabel": "",
+            "isShowLabel": false,
+            "placeholderText": "",
+            "containerClass": "col-md-6 md-layout-item md-size-50",
+            "additionalLabelClass": "pt-3",
+            "defaultValue": "",
+            "defaultValueForAutocomplete": [],
+            "rows": [],
+            "validations": [],
+            "autocompleteLink": "",
+            "autocomplete": [],
+            "multiple": false,
+            "buttonClass": "btn btn-success md-button md-raised md-success md-theme-default",
+            "buttonType": "submit",
+            "postLink": "",
+            "emitEventCode": "",
+            "emitEventData": "",
+            "isRunValidation": true
+        }
+    }
+}
