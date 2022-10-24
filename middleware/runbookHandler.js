@@ -92,8 +92,8 @@ const readProcessByID = async (_request, response) => {
                 "stepDone": 4
             },
             "currentStep": [
-                1,
-                0
+                3,
+                1
             ],
             "stepList": [
                 [
@@ -117,7 +117,7 @@ const readProcessByID = async (_request, response) => {
                         "caption": "Potvrda o alokaciji",
                         "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
                         "action": null,
-                        "status": "ACTIVE",
+                        "status": "COMPLETED",
                     },
                 ],
                 [
@@ -127,7 +127,7 @@ const readProcessByID = async (_request, response) => {
                         "caption": "Povrda o evaluaciji",
                         "description": "Evaluaciju obavlja firma na koju si alociran/na.",
                         "action": null,
-                        "status": "INACTIVE",
+                        "status": "COMPLETED",
                     },
                 ],
                 [
@@ -153,7 +153,7 @@ const readProcessByID = async (_request, response) => {
                             "title": "Ispuni prijavnicu",
                             "label": "Prijavnica"
                         },
-                        "status": "INACTIVE",
+                        "status": "ACTIVE",
                     }
                 ],
                 [
@@ -521,7 +521,7 @@ const readActionByID = async (request, response) => {
                         "items": [
                             {
                                 "value": "1",
-                                "text": "Pošalji mi kopiju prijavnice na email"
+                                "text": "Pošalji mi kopiju prijavnice na e-mail"
                             }
                         ]
                     },
@@ -1007,7 +1007,7 @@ const readActionByID = async (request, response) => {
                         "items": [
                             {
                                 "value": "1",
-                                "text": "Pošalji mi kopiju prijavnice na email"
+                                "text": "Pošalji mi kopiju prijavnice na e-mail"
                             }
                         ]
                     },
@@ -1044,7 +1044,7 @@ const readActionByID = async (request, response) => {
             response.status(200).json({
                 "formConfig": {
                     "headline": "Predaja dnevnika prakse",
-                    "subHeadline": "Template za dnevnik dostupan je na http://bit.ly/fipu-praksa-template Dnevnik je potrebno predati prije prijave ispitnoga roka.",
+                    "subHeadline": "Template za dnevnik dostupan je na http://bit.ly/fipu-praksa-template. Dnevnik je potrebno predati prije prijave ispitnoga roka.",
                     "isShowHeadline": true
                 },
                 "sections": {
@@ -1249,7 +1249,7 @@ const readActionByID = async (request, response) => {
                         "items": [
                             {
                                 "value": "1",
-                                "text": "Pošalji mi kopiju prijavnice na email"
+                                "text": "Pošalji mi kopiju prijavnice na e-mail"
                             }
                         ]
                     },
