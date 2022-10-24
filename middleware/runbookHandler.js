@@ -92,8 +92,8 @@ const readProcessByID = async (_request, response) => {
                 "stepDone": 4
             },
             "currentStep": [
-                3,
-                1
+                1,
+                0
             ],
             "stepList": [
                 [
@@ -116,8 +116,8 @@ const readProcessByID = async (_request, response) => {
                         "title": "Alociranje na zadatak",
                         "caption": "Potvrda o alokaciji",
                         "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
-                        "action": "Zadatak 41 - Valamar d.d.",
-                        "status": "COMPLETED",
+                        "action": null,
+                        "status": "ACTIVE",
                     },
                 ],
                 [
@@ -127,7 +127,7 @@ const readProcessByID = async (_request, response) => {
                         "caption": "Povrda o evaluaciji",
                         "description": "Evaluaciju obavlja firma na koju si alociran/na.",
                         "action": null,
-                        "status": "COMPLETED",
+                        "status": "INACTIVE",
                     },
                 ],
                 [
@@ -153,7 +153,7 @@ const readProcessByID = async (_request, response) => {
                             "title": "Ispuni prijavnicu",
                             "label": "Prijavnica"
                         },
-                        "status": "ACTIVE",
+                        "status": "INACTIVE",
                     }
                 ],
                 [
