@@ -99,7 +99,7 @@ const readProcessByID = async (_request, response) => {
                 [
                     {
                         "id": 1,
-                        "title": "Odabir preferencija za paksu",
+                        "title": "Odabir preferencija za praksu",
                         "caption": "Odabrane preferencije",
                         "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;).",
                         "action": {
@@ -133,7 +133,7 @@ const readProcessByID = async (_request, response) => {
                 [
                     {
                         "id": 1,
-                        "title": "Odabir preferencija za paksu",
+                        "title": "Odabir preferencija za praksu",
                         "caption": "Odabrane preferencije",
                         "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
                         "action": {
