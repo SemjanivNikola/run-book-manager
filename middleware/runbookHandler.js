@@ -92,8 +92,8 @@ const readProcessByID = async (_request, response) => {
                 "stepDone": 4
             },
             "currentStep": [
-                3,
-                1
+                0,
+                0
             ],
             "stepList": [
                 [
@@ -105,9 +105,10 @@ const readProcessByID = async (_request, response) => {
                         "action": {
                             "id": 1,
                             "title": "Odaberi preferencije",
-                            "label": "Preferencije"
+                            "label": "Preferencije",
+                            "action": null
                         },
-                        "status": "COMPLETED",
+                        "status": "ACTIVE",
                     }
                 ],
                 [
@@ -117,7 +118,7 @@ const readProcessByID = async (_request, response) => {
                         "caption": "Potvrda o alokaciji",
                         "description": "Praksu možeš prijaviti na dva načina. Ukoliko si se dogovorio/la s firmom gdje bi odrađivao/la praksu samo ju je potrebno dodati u preferencije s tablice. Naravno prije toga oni trebaju ispuniti prijavnicu za održavanje prakse ukoliko nisu. Nakon toga ideš na sljedeće korake. Ukoliko to nije slučaj, možeš pogledati izbor firmi te odabrati ono što ti se čini najzanimljivje ili najlakše - nećemo nikome reći ;), dolje u među poveznicama.",
                         "action": null,
-                        "status": "COMPLETED",
+                        "status": "INACTIVE",
                     },
                 ],
                 [
@@ -127,7 +128,7 @@ const readProcessByID = async (_request, response) => {
                         "caption": "Povrda o evaluaciji",
                         "description": "Evaluaciju obavlja firma na koju si alociran/na.",
                         "action": null,
-                        "status": "COMPLETED",
+                        "status": "INACTIVE",
                     },
                 ],
                 [
@@ -139,7 +140,8 @@ const readProcessByID = async (_request, response) => {
                         "action": {
                             "id": 1,
                             "title": "Odaberi preferencije",
-                            "label": "Preferencije"
+                            "label": "Preferencije",
+                            "action": null
                         },
                         "status": "INACTIVE",
                     },
@@ -151,9 +153,10 @@ const readProcessByID = async (_request, response) => {
                         "action": {
                             "id": 2,
                             "title": "Ispuni prijavnicu",
-                            "label": "Prijavnica"
+                            "label": "Prijavnica",
+                            "action": null
                         },
-                        "status": "ACTIVE",
+                        "status": "INACTIVE",
                     }
                 ],
                 [
@@ -165,7 +168,8 @@ const readProcessByID = async (_request, response) => {
                         "action": {
                             "id": 3,
                             "title": "Predaj dnevnik prakse",
-                            "label": "Dnevnik prakse"
+                            "label": "Dnevnik prakse",
+                            "action": null
                         },
                         "status": "INACTIVE",
                     },
@@ -176,7 +180,12 @@ const readProcessByID = async (_request, response) => {
                         "title": "Prijava ispita",
                         "caption": "Prijava ispita",
                         "description": "Ispit prijavljuješ preko sutomata.",
-                        "action": "https://www.isvu.hr/studomat/hr/prijava",
+                        "action": {
+                            "id": 3,
+                            "title": "Prijavi ispit",
+                            "label": "Prijavi",
+                            "action": ["https://www.isvu.hr/studomat/hr/prijava"]
+                        },
                         "status": "INACTIVE",
                     }
                 ]

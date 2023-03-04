@@ -3,11 +3,11 @@ const fs = require("fs");
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-require('./database/prepareDB');
+// require('./database/prepareDB');
 
-const handler = require('./middleware/handler');
+// const handler = require('./middleware/handler');
 const runbookHandler = require('./middleware/runbookHandler');
-const viewQuery = require('./queries/viewQuery');
+// const viewQuery = require('./queries/viewQuery');
 
 const PORT = process.env.PORT || 3000;
 
@@ -24,16 +24,16 @@ app.get('/', (_req, res) => {
    res.send('Node.js, Express, and Postgres API')
 });
 
-app.post('/workspace', handler.createWorkspace);
-app.get('/workspace', handler.readWorkspaceList);
-app.get('/workspace/:id', handler.readWorkspaceByID);
-app.delete('/workspace/:id', handler.deleteWorkspace);
+// app.post('/workspace', handler.createWorkspace);
+// app.get('/workspace', handler.readWorkspaceList);
+// app.get('/workspace/:id', handler.readWorkspaceByID);
+// app.delete('/workspace/:id', handler.deleteWorkspace);
 
-app.post('/table', handler.createTable);
+// app.post('/table', handler.createTable);
 
-app.post('/view', handler.createView);
-app.get('/view/:id', handler.readViewByID);
-app.delete('/view/:id', viewQuery.deleteView); //TODO:
+// app.post('/view', handler.createView);
+// app.get('/view/:id', handler.readViewByID);
+// app.delete('/view/:id', viewQuery.deleteView); //TODO:
 
 app.get('/process', runbookHandler.readList);
 app.get('/process/:id', runbookHandler.readProcessByID);
